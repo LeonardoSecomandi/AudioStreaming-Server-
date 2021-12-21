@@ -1,0 +1,9 @@
+C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming.API\AudioStreaming.Models\bin\Debug\netstandard2.0\AudioStreaming.Models.deps.json
+C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming.API\AudioStreaming.Models\bin\Debug\netstandard2.0\AudioStreaming.Models.dll
+C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming.API\AudioStreaming.Models\bin\Debug\netstandard2.0\AudioStreaming.Models.pdb
+C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming.API\AudioStreaming.Models\obj\Debug\netstandard2.0\AudioStreaming.Models.csprojAssemblyReference.cache
+C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming.API\AudioStreaming.Models\obj\Debug\netstandard2.0\AudioStreaming.Models.AssemblyInfoInputs.cache
+C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming.API\AudioStreaming.Models\obj\Debug\netstandard2.0\AudioStreaming.Models.AssemblyInfo.cs
+C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming.API\AudioStreaming.Models\obj\Debug\netstandard2.0\AudioStreaming.Models.csproj.CoreCompileInputs.cache
+C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming.API\AudioStreaming.Models\obj\Debug\netstandard2.0\AudioStreaming.Models.dll
+C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming.API\AudioStreaming.Models\obj\Debug\netstandard2.0\AudioStreaming.Models.pdb
