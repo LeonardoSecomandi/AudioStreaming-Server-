@@ -2,6 +2,8 @@
 using AudioStreaming.API.Models.DTOS.Requests;
 using AudioStreaming.API.Models.DTOS.Responses;
 using AudioStreaming.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,6 +15,7 @@ namespace AudioStreaming.API.Controllers
 {
     [ApiController]
     [Route("[Controller]/api")]
+    [Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]
     public class CanzoniController : ControllerBase
     {
         private ICanzoniService _canzoniService { get; set; }

@@ -20,6 +20,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace AudioStreaming.API
 {
     public class Startup
@@ -39,6 +40,26 @@ namespace AudioStreaming.API
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AudioStreaming.API", Version = "v1" });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Description = "Please insert JWT with Bearer into field",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                   {
+                     new OpenApiSecurityScheme
+                     {
+                       Reference = new OpenApiReference
+                       {
+                         Type = ReferenceType.SecurityScheme,
+                         Id = "Bearer"
+                       }
+                      },
+                      new string[] { }
+                    }
+                 });
             });
 
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("DbConnection")));
@@ -71,7 +92,6 @@ namespace AudioStreaming.API
                         RequireExpirationTime = false
                     };
                 });
-           
 
             services.AddDefaultIdentity<UserModel>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<UsersDbContext>();
