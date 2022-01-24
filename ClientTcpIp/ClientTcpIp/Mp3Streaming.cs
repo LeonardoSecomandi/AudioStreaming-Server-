@@ -28,9 +28,7 @@ namespace ClientTcpIp
             
             this.networkStream = ns;
             timer1 = new System.Timers.Timer(250);
-            timer1.Start();
-            timer1.Enabled = true;
-            timer1.Elapsed += timer1_Tick;            
+            timer1.Elapsed += timer1_Tick;
         }
 
         //void OnVolumeSliderChanged(object sender, EventArgs e)
@@ -74,7 +72,6 @@ namespace ClientTcpIp
                             try
                             {
                                 frame = Mp3Frame.LoadFromStream(readFullyStream);
-                                if (frame == null) Console.WriteLine("nun ce sta nnt nellu framemp3");
                             }
                             catch (EndOfStreamException)
                             {
@@ -108,7 +105,7 @@ namespace ClientTcpIp
                     Console.WriteLine("Exiting");
                     // was doing this in a finally block, but for some reason
                     // we are hanging on response stream .Dispose so never get there
-                    decompressor?.Dispose();
+                    decompressor.Dispose();
                 }
             }
             finally
@@ -218,22 +215,15 @@ namespace ClientTcpIp
                         Console.WriteLine("Reached end of stream");
                         StopPlayback();
                     }
-                }                
+                }
+                
             }
         }
         private void Play()
         {
-            try
-            {
-                waveOut.Play();
-                Console.WriteLine(String.Format("Started playing, waveOut.PlaybackState={0}", waveOut.PlaybackState));
-                playbackState = StreamingPlaybackState.Playing;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                Play();
-            }
+            waveOut.Play();
+            Console.WriteLine(String.Format("Started playing, waveOut.PlaybackState={0}", waveOut.PlaybackState));
+            playbackState = StreamingPlaybackState.Playing;
         }
 
         private void Pause()

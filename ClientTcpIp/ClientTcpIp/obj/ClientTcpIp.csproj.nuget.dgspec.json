@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\finazzi.17122\\Desktop\\repos\\repos\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj": {}
+    "C:\\Users\\finazzi.17122\\source\\repos\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\finazzi.17122\\Desktop\\repos\\repos\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj": {
+    "C:\\Users\\finazzi.17122\\source\\repos\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\finazzi.17122\\Desktop\\repos\\repos\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj",
+        "projectUniqueName": "C:\\Users\\finazzi.17122\\source\\repos\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj",
         "projectName": "ClientTcpIp",
-        "projectPath": "C:\\Users\\finazzi.17122\\Desktop\\repos\\repos\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj",
+        "projectPath": "C:\\Users\\finazzi.17122\\source\\repos\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj",
         "packagesPath": "C:\\Users\\finazzi.17122\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\finazzi.17122\\Desktop\\repos\\repos\\ClientTcpIp\\ClientTcpIp\\obj\\",
+        "outputPath": "C:\\Users\\finazzi.17122\\source\\repos\\ClientTcpIp\\ClientTcpIp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -61,7 +61,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.13, 3.1.13]"
+              "version": "[3.1.12, 3.1.12]"
             }
           ],
           "frameworkReferences": {
@@ -72,7 +72,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
