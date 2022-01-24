@@ -103,7 +103,7 @@ namespace AudioStreaming.API.Controllers
                     new Claim(JwtRegisteredClaimNames.Sub,user.Email),
                     new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
                 }),
-                Expires = DateTime.UtcNow.AddHours(6),
+               // Expires = DateTime.UtcNow.AddHours(6),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
@@ -111,6 +111,46 @@ namespace AudioStreaming.API.Controllers
             var JwtToken = jwtTokenHandler.WriteToken(Token);
 
             return JwtToken;
+        }
+
+        [HttpPost("Login")]
+        public async Task<AuthResult>Login(UserLoginRequest req)
+        {
+            var isUser = await _userManager.FindByEmailAsync(req.Email);
+            if (isUser != null)
+            {
+                var checkpasswd = await _userManager.CheckPasswordAsync(isUser, req.Password);
+                if (checkpasswd)
+                {
+                    return new AuthResult()
+                    {
+                        Success = true,
+                        Username = isUser.Email,
+                        Token = GenerateJwtToken(isUser),
+                        Errors = null
+                    };
+                }
+                return new AuthResult()
+                {
+                    Success = false,
+                    Token = null,
+                    Errors = new List<string>()
+                {
+                    "Password non corretta"
+                },
+                    Username = null
+                };
+            }
+            return new AuthResult()
+            {
+                Success = false,
+                Token = null,
+                Errors = new List<string>()
+                {
+                    "Utente non esistente"
+                },
+                Username = null
+            };
         }
     }
 }

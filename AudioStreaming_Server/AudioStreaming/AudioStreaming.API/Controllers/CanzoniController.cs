@@ -15,7 +15,7 @@ namespace AudioStreaming.API.Controllers
 {
     [ApiController]
     [Route("[Controller]/api")]
-    [Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class CanzoniController : ControllerBase
     {
         private ICanzoniService _canzoniService { get; set; }
