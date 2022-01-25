@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace AudioStreaming.API.Migrations.UsersDb
+namespace AudioStreaming.API.Migrations
 {
     public partial class Initial : Migration
     {
@@ -44,6 +44,21 @@ namespace AudioStreaming.API.Migrations.UsersDb
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserTokens",
+                columns: table => new
+                {
+                    idUser = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    UserName = table.Column<string>(type: "TEXT", nullable: false),
+                    UserToken = table.Column<string>(type: "TEXT", nullable: false),
+                    CreationTime = table.Column<DateTime>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserTokens", x => x.idUser);
                 });
 
             migrationBuilder.CreateTable(
@@ -206,6 +221,9 @@ namespace AudioStreaming.API.Migrations.UsersDb
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "UserTokens");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

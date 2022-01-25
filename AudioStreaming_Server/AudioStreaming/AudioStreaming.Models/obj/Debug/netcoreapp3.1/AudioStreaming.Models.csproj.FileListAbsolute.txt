@@ -25,3 +25,13 @@ F:\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcorea
 F:\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.csproj.CoreCompileInputs.cache
 F:\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.dll
 F:\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.pdb
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\bin\Debug\netcoreapp3.1\AudioStreaming.Models.deps.json
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\bin\Debug\netcoreapp3.1\AudioStreaming.Models.dll
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\bin\Debug\netcoreapp3.1\AudioStreaming.Models.pdb
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.csproj.AssemblyReference.cache
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.AssemblyInfoInputs.cache
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.AssemblyInfo.cs
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.csproj.CoreCompileInputs.cache
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.dll
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.pdb

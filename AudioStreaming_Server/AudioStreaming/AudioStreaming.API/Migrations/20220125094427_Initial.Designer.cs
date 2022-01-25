@@ -6,10 +6,10 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace AudioStreaming.API.Migrations.UsersDb
+namespace AudioStreaming.API.Migrations
 {
     [DbContext(typeof(UsersDbContext))]
-    [Migration("20220120122751_Initial")]
+    [Migration("20220125094427_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -80,6 +80,28 @@ namespace AudioStreaming.API.Migrations.UsersDb
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("AudioStreaming.API.Models.UserTokens", b =>
+                {
+                    b.Property<int>("idUser")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserToken")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("idUser");
+
+                    b.ToTable("UserTokens");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
