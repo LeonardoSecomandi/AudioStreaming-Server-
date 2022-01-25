@@ -16,5 +16,7 @@ namespace AudioStreaming.API.Data
 
         }
 
+        public DbSet<UserTokens> UserTokens { get; set; }
+
     }
 }

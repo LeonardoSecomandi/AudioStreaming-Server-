@@ -25,17 +25,6 @@ F:\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcorea
 F:\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.csproj.CoreCompileInputs.cache
 F:\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.dll
 F:\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.pdb
-C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\bin\Debug\netcoreapp3.1\AudioStreaming.Models.deps.json
-C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\bin\Debug\netcoreapp3.1\AudioStreaming.Models.dll
-C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\bin\Debug\netcoreapp3.1\AudioStreaming.Models.pdb
-C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.csprojAssemblyReference.cache
-C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.AssemblyInfoInputs.cache
-C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.AssemblyInfo.cs
-C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.csproj.CoreCompileInputs.cache
-C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.dll
-C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.pdb
-C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.dll
-C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.pdb
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\bin\Debug\netcoreapp3.1\AudioStreaming.Models.deps.json
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\bin\Debug\netcoreapp3.1\AudioStreaming.Models.dll
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\bin\Debug\netcoreapp3.1\AudioStreaming.Models.pdb
@@ -44,3 +33,5 @@ C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Se
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.AssemblyInfoInputs.cache
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.AssemblyInfo.cs
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.csproj.CoreCompileInputs.cache
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.dll
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Models\obj\Debug\netcoreapp3.1\AudioStreaming.Models.pdb

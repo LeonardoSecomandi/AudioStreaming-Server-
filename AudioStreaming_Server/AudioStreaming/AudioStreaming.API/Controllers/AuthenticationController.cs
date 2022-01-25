@@ -22,13 +22,16 @@ namespace AudioStreaming.API.Controllers
     {
         private readonly UserManager<UserModel> _userManager;
         private readonly JwtConfig _jwtConfig;
+        private readonly IUserManager userTokenManager;
 
         public AuthenticationController(
             UserManager<UserModel> userManager,
-            IOptionsMonitor<JwtConfig> config)
+            IOptionsMonitor<JwtConfig> config,
+            IUserManager TokenManager)
         {
             this._userManager = userManager;
             this._jwtConfig = config.CurrentValue;
+            this.userTokenManager = TokenManager;
         }
 
         [HttpPost("Register")]
@@ -62,14 +65,24 @@ namespace AudioStreaming.API.Controllers
                 }
                 var NewUser = new UserModel() { Email = user.Email, UserName = user.Username };
                 var IsCreated = await _userManager.CreateAsync(NewUser, user.Password);
+                var NewUserToken = new UserTokens()
+                {
+                    UserName = user.Username,
+                    UserToken = GenerateJwtToken(NewUser),
+                    CreationTime = DateTime.Now
+                };
+
                 if (IsCreated.Succeeded)
                 {
-                    var JwtToken = GenerateJwtToken(NewUser);
+                    await userTokenManager.AddUserToken(NewUserToken);
                     return Ok(new UserRegistrationResponse()
                     {
                         Success = true,
-                        Token = JwtToken
+                        Token = NewUserToken.UserToken,
+                        Errors=null,
+                        Username=NewUser.UserName
                     });
+                    
                 }
                 else
                 {

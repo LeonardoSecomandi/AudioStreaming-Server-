@@ -70,6 +70,7 @@ namespace AudioStreaming.API
                 options.UseSqlite(Configuration.GetConnectionString("UsersDbConnection")));
 
             services.AddScoped<ICanzoniService, CanzoniService>();
+            services.AddScoped<IUserManager, UserManager>();
 
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
 
