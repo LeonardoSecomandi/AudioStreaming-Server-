@@ -27,8 +27,10 @@ namespace ClientTcpIp
             //Disposed += MP3StreamingPanel_Disposing;
             
             this.networkStream = ns;
-            timer1 = new System.Timers.Timer(250);
+            timer1 = new System.Timers.Timer(250);            
             timer1.Elapsed += timer1_Tick;
+            timer1.Enabled = true;
+            timer1.Start();
         }
 
         //void OnVolumeSliderChanged(object sender, EventArgs e)
@@ -51,6 +53,7 @@ namespace ClientTcpIp
         
         private void StreamMp3(object state)
         {
+            fullyDownloaded = false;
             var buffer = new byte[16384 * 4]; // needs to be big enough to hold a decompressed frame
 
             IMp3FrameDecompressor decompressor = null;
@@ -98,7 +101,7 @@ namespace ClientTcpIp
                             }
                             int decompressed = decompressor.DecompressFrame(frame, buffer, 0);
                             //Debug.WriteLine(String.Format("Decompressed a frame {0}", decompressed));
-                            bufferedWaveProvider.AddSamples(buffer, 0, decompressed);
+                            bufferedWaveProvider.AddSamples(buffer, 0, decompressed);                            
                         }
 
                     } while (playbackState != StreamingPlaybackState.Stopped);
@@ -138,15 +141,15 @@ namespace ClientTcpIp
         {
             buttonPlay_Click();
         }
+
         private void buttonPlay_Click()
         {
             if (playbackState == StreamingPlaybackState.Stopped)
-            {
+            {                
                 playbackState = StreamingPlaybackState.Buffering;
                 bufferedWaveProvider = null;
                 StreamMp3(this);
-                //ThreadPool.QueueUserWorkItem(StreamMp3);
-                timer1.Enabled = true;
+                ThreadPool.QueueUserWorkItem(StreamMp3);                
             }
             else if (playbackState == StreamingPlaybackState.Paused)
             {

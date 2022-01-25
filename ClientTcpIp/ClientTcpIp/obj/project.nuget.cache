@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4SbYEmItIohFZskP0DkWUzRCdE+Q+21hXrsuuwBN4dmgbgIclmK2s+3KMxImnqNugU25EHZOU7Lg5MttSFDR3w==",
+  "dgSpecHash": "YH2VeHdzoMCNj8+XC9bIMyDfgCL98td2uCCjFN98b+RI+J2FbyAt1N5YFwvcEyaZ6gFsjiLrni7qXieV1M2d/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\finazzi.17122\\source\\repos\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj",
+  "projectFilePath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\finazzi.17122\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\finazzi.17122\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -14,8 +14,7 @@
     "C:\\Users\\finazzi.17122\\.nuget\\packages\\naudio.winforms\\2.0.1\\naudio.winforms.2.0.1.nupkg.sha512",
     "C:\\Users\\finazzi.17122\\.nuget\\packages\\naudio.winmm\\2.0.1\\naudio.winmm.2.0.1.nupkg.sha512",
     "C:\\Users\\finazzi.17122\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\finazzi.17122\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\finazzi.17122\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.12\\microsoft.netcore.app.host.win-x64.3.1.12.nupkg.sha512"
+    "C:\\Users\\finazzi.17122\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

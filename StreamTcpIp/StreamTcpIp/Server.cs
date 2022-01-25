@@ -39,17 +39,16 @@ class Server
     }
     
     public static void SendFile(NetworkStream stream, string fileName)
-    {        
+    {
         if (File.Exists(fileName))
         {
-            FileStream fileStream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
-            fileStream.CopyTo(stream);
+            FileStream fileStream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);            
+            fileStream.CopyToAsync(stream);
         }
-        else        
+        else
             Console.WriteLine("File non esiste");
-        
-        stream.Flush();
-        stream.Close();
+        //stream.Flush();
+        //stream.Close();
     }
 
     public void HandleDeivce(Object obj)
@@ -63,20 +62,19 @@ class Server
         int i;
         try
         {
-            while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
-            {
-                
-                string hex = BitConverter.ToString(bytes);
-                data = Encoding.ASCII.GetString(bytes, 0, i);
-                Console.WriteLine("{1}: Received: {0}", data, Thread.CurrentThread.ManagedThreadId);
-
-                SendFile(stream, "Example.mp3");
-            }
+            //while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
+            //{                
+            string hex = BitConverter.ToString(bytes);
+            data = Encoding.ASCII.GetString(bytes, 0, bytes.Length);
+            Console.WriteLine("{1}: Received: {0}", data, Thread.CurrentThread.ManagedThreadId);                               
+            //}
+            SendFile(stream, "Example.mp3");
         }
         catch (Exception e)
         {
             Console.WriteLine("Exception: {0}", e.ToString());
             client.Close();
         }
+
     }
 }

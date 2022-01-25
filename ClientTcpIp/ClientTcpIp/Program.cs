@@ -3,6 +3,7 @@ using System;
 using System.Net.Sockets;
 using System.Threading;
 using ClientTcpIp;
+using System.Text;
 
 namespace ClientTcpIp
 {
@@ -28,9 +29,10 @@ namespace ClientTcpIp
                 TcpClient client = new TcpClient(server, port);
 
                 NetworkStream stream = client.GetStream();
-
+                stream.Write(Encoding.ASCII.GetBytes(message));
                 
-                var suona = new Mp3Streaming(stream);                
+                var suona = new Mp3Streaming(stream);
+                Thread.Sleep(20);
                 suona.Riproduci();
 
                 Thread.Sleep(2000);
