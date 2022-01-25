@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Client_EasySound
-build_property.ProjectDir = C:\Users\Zaroual.17224\Desktop\Client_EasySound\Client_EasySound\
+build_property.ProjectDir = C:\Users\Zaroual.17224\Documents\GitHub\AudioStreaming-Server-\Client_EasySound\Client_EasySound\

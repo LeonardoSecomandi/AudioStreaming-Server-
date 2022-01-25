@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WWLfOS8v1fg6Gcl4w14CsdFTTGQ9cdugDQn7TSoPTwSiuD8Lxy7FXQqKG1PQ65UrTZ7IBGWC0ejJa3y2v+j7xA==",
+  "dgSpecHash": "mKkDEu1QPOEzgQ+P6mOzVTi2AzEXnsXUX8i3BTyfo4UyhBdvcYPuitzPIYFLbuQfaHuPxAvUIX+YH3PY0UXTwQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Zaroual.17224\\Desktop\\Client_EasySound\\Client_EasySound\\Client_EasySound.csproj",
+  "projectFilePath": "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\AudioStreaming-Server-\\Client_EasySound\\Client_EasySound\\Client_EasySound.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Zaroual.17224\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Zaroual.17224\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.13\\microsoft.aspnetcore.cryptography.internal.5.0.13.nupkg.sha512",

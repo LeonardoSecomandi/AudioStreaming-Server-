@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zaroual.17224\\Desktop\\Client_EasySound\\Client_EasySound\\Client_EasySound.csproj": {}
+    "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\AudioStreaming-Server-\\Client_EasySound\\Client_EasySound\\Client_EasySound.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zaroual.17224\\Desktop\\Client_EasySound\\Client_EasySound\\Client_EasySound.csproj": {
+    "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\AudioStreaming-Server-\\Client_EasySound\\Client_EasySound\\Client_EasySound.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zaroual.17224\\Desktop\\Client_EasySound\\Client_EasySound\\Client_EasySound.csproj",
+        "projectUniqueName": "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\AudioStreaming-Server-\\Client_EasySound\\Client_EasySound\\Client_EasySound.csproj",
         "projectName": "Client_EasySound",
-        "projectPath": "C:\\Users\\Zaroual.17224\\Desktop\\Client_EasySound\\Client_EasySound\\Client_EasySound.csproj",
+        "projectPath": "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\AudioStreaming-Server-\\Client_EasySound\\Client_EasySound\\Client_EasySound.csproj",
         "packagesPath": "C:\\Users\\Zaroual.17224\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zaroual.17224\\Desktop\\Client_EasySound\\Client_EasySound\\obj\\",
+        "outputPath": "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\AudioStreaming-Server-\\Client_EasySound\\Client_EasySound\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Zaroual.17224\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -49,6 +49,10 @@
               "version": "[5.0.13, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.13, )"
             },
