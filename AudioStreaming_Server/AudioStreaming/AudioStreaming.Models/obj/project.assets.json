@@ -8,27 +8,20 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\secomandi.17131\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\finazzi.17122\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
+      "projectUniqueName": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
       "projectName": "AudioStreaming.Models",
-      "projectPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
-      "packagesPath": "C:\\Users\\secomandi.17131\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\obj\\",
+      "projectPath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
+      "packagesPath": "C:\\Users\\finazzi.17122\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\secomandi.17131\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\finazzi.17122\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -67,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

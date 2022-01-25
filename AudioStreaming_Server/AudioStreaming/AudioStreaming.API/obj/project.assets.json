@@ -1907,27 +1907,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\secomandi.17131\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\finazzi.17122\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
+      "projectUniqueName": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
       "projectName": "AudioStreaming.API",
-      "projectPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
-      "packagesPath": "C:\\Users\\secomandi.17131\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\obj\\",
+      "projectPath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
+      "packagesPath": "C:\\Users\\finazzi.17122\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\secomandi.17131\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\finazzi.17122\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1940,8 +1933,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
-              "projectPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
+            "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
+              "projectPath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
             }
           }
         }
@@ -2005,7 +1998,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

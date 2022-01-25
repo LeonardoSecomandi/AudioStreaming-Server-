@@ -45,7 +45,9 @@ namespace AudioStreaming.API
                     In = ParameterLocation.Header,
                     Description = "Please insert JWT with Bearer into field",
                     Name = "Authorization",
-                    Type = SecuritySchemeType.ApiKey
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme="Bearer",
+                    BearerFormat="JWT"
                 });
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement {
                    {
