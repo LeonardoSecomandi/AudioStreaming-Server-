@@ -39,8 +39,26 @@ namespace AudioStreaming.API.Models
                     Username = null
                 };
             }
-            
-            
         }
+        public async Task<UserTokenResponse> GetUserToken(string Username)
+        {
+            var result = await _context.UserTokens.FirstOrDefaultAsync(x => x.UserName == Username);
+            if (result != null)
+                return new UserTokenResponse()
+                {
+                    Token = result.UserToken,
+                    CreationTime = result.CreationTime,
+                    Username = result.UserName
+                };
+
+            return new UserTokenResponse()
+            {
+                Token = null,
+                CreationTime = default(DateTime),
+                Username = null
+            };
+        }
+
+
     }
 }

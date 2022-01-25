@@ -135,11 +135,12 @@ namespace AudioStreaming.API.Controllers
                 var checkpasswd = await _userManager.CheckPasswordAsync(isUser, req.Password);
                 if (checkpasswd)
                 {
+                    var UserToken = await userTokenManager.GetUserToken(isUser.UserName);
                     return new AuthResult()
                     {
                         Success = true,
                         Username = isUser.Email,
-                        Token = GenerateJwtToken(isUser),
+                        Token = UserToken.Token,
                         Errors = null
                     };
                 }

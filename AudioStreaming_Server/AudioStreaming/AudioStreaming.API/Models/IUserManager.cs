@@ -9,5 +9,6 @@ namespace AudioStreaming.API.Models
     public interface IUserManager
     {
         public Task<UserTokenResponse> AddUserToken(UserTokens req);
+        public Task<UserTokenResponse> GetUserToken(string Username);
     }
 }
