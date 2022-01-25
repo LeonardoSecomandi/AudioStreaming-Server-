@@ -119,7 +119,6 @@ namespace ClientTcpIp
                 }
             }
         }
-
         private static IMp3FrameDecompressor CreateFrameDecompressor(Mp3Frame frame)
         {
             WaveFormat waveFormat = new Mp3WaveFormat(frame.SampleRate, frame.ChannelMode == ChannelMode.Mono ? 1 : 2,
@@ -224,9 +223,13 @@ namespace ClientTcpIp
         }
         private void Play()
         {
-            waveOut.Play();
-            Console.WriteLine(String.Format("Started playing, waveOut.PlaybackState={0}", waveOut.PlaybackState));
-            playbackState = StreamingPlaybackState.Playing;
+            if (waveOut != null)
+            {
+                waveOut.Play();
+                Console.WriteLine(String.Format("Started playing, waveOut.PlaybackState={0}", waveOut.PlaybackState));
+                playbackState = StreamingPlaybackState.Playing;
+            }
+            else { Play(); }
         }
 
         private void Pause()
