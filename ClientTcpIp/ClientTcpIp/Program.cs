@@ -4,17 +4,23 @@ using System.Net.Sockets;
 using System.Threading;
 using ClientTcpIp;
 using System.Text;
+using System.IO;
 
 namespace ClientTcpIp
 {
     class Program
-    {    
+    {        
         static void Main(string[] args)
         {
+            bool download = false   ;
+            string nomeCanzone = "Example1.mp3";
+
+            if (download) nomeCanzone = "%d" + nomeCanzone;
+
             new Thread(() =>
             {
                 Thread.CurrentThread.IsBackground = true;
-                Connect("127.0.0.1", "ciao");
+                Connect("127.0.0.1", nomeCanzone);
             }).Start();
 
             Console.ReadLine();
@@ -30,13 +36,26 @@ namespace ClientTcpIp
 
                 NetworkStream stream = client.GetStream();
                 stream.Write(Encoding.ASCII.GetBytes(message));
-                
-                var suona = new Mp3Streaming(stream);
-                Thread.Sleep(20);
-                suona.Riproduci();
 
-                Thread.Sleep(2000);
-            
+                if (!message.Contains("%d"))
+                {
+                    var suona = new Mp3Streaming(stream);
+                    suona.Riproduci();
+                }
+                else
+                {
+                    using (Stream file = File.Create("fileAudio.mp3"))
+                    {
+                        //while (stream.Read()) 
+                        //{
+                        //    stream.CopyTo(file);
+                        //}
+                        
+                    }
+                }       
+
+                Thread.Sleep(20);                
+
                 stream.Close();
                 client.Close();
             }

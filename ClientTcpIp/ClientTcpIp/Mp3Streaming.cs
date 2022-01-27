@@ -222,14 +222,10 @@ namespace ClientTcpIp
             }
         }
         private void Play()
-        {
-            if (waveOut != null)
-            {
-                waveOut.Play();
-                Console.WriteLine(String.Format("Started playing, waveOut.PlaybackState={0}", waveOut.PlaybackState));
-                playbackState = StreamingPlaybackState.Playing;
-            }
-            else { Play(); }
+        {            
+            waveOut.Play();
+            Console.WriteLine(String.Format("Started playing, waveOut.PlaybackState={0}", waveOut.PlaybackState));
+            playbackState = StreamingPlaybackState.Playing;            
         }
 
         private void Pause()

@@ -32,8 +32,6 @@ C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\Clien
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\bin\Debug\netcoreapp3.1\NAudio.Wasapi.dll
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\bin\Debug\netcoreapp3.1\NAudio.WinForms.dll
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\bin\Debug\netcoreapp3.1\NAudio.WinMM.dll
-C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\obj\Debug\netcoreapp3.1\ClientTcpIp.csproj.AssemblyReference.cache
-C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\obj\Debug\netcoreapp3.1\ClientTcpIp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\obj\Debug\netcoreapp3.1\ClientTcpIp.AssemblyInfoInputs.cache
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\obj\Debug\netcoreapp3.1\ClientTcpIp.AssemblyInfo.cs
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\obj\Debug\netcoreapp3.1\ClientTcpIp.csproj.CoreCompileInputs.cache
@@ -41,3 +39,4 @@ C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\Clien
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\obj\Debug\netcoreapp3.1\ClientTcpIp.dll
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\obj\Debug\netcoreapp3.1\ClientTcpIp.pdb
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\obj\Debug\netcoreapp3.1\ClientTcpIp.genruntimeconfig.cache
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\obj\Debug\netcoreapp3.1\ClientTcpIp.csprojAssemblyReference.cache

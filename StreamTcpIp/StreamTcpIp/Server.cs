@@ -1,6 +1,9 @@
 ﻿using NAudio.Wave;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -38,37 +41,50 @@ class Server
         }
     }
     
-    public static void SendFile(NetworkStream stream, string fileName)
+    public static void SendFile(NetworkStream stream, string fileName, bool download)
     {
         if (File.Exists(fileName))
         {
-            FileStream fileStream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);            
-            fileStream.CopyToAsync(stream);
+            if (download)
+            {
+                using (var fileIO = File.OpenRead(fileName))
+                using (var clientSocket = stream)
+                {
+                    // Send Length (Int64)
+                    //clientSocket.Write(fileIO.Length, 0, 8);
+
+                    var buffer = new byte[1024 * 8];
+                    int count;
+                    while ((count = fileIO.Read(buffer, 0, buffer.Length)) > 0)
+                        clientSocket.Write(buffer, 0, count);
+                }
+            }
+            else
+            {
+                FileStream fileStream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
+                fileStream.CopyToAsync(stream);
+            }
         }
         else
-            Console.WriteLine("File non esiste");
-        //stream.Flush();
-        //stream.Close();
-    }
+            Console.WriteLine("File non esiste");        
+    }    
 
     public void HandleDeivce(Object obj)
     {
         TcpClient client = (TcpClient)obj;
         var stream = client.GetStream();
-        string imei = String.Empty;
-
+        
         string data = null;
-        Byte[] bytes = new Byte[32768];
-        int i;
+        Byte[] bytes = new Byte[1028];
         try
         {
-            //while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
-            //{                
+            stream.Read(bytes);
             string hex = BitConverter.ToString(bytes);
             data = Encoding.ASCII.GetString(bytes, 0, bytes.Length);
-            Console.WriteLine("{1}: Received: {0}", data, Thread.CurrentThread.ManagedThreadId);                               
-            //}
-            SendFile(stream, "Example1.mp3");
+            Console.WriteLine("{1}: Received: {0}", data, Thread.CurrentThread.ManagedThreadId);
+            bool manda = data.Contains("%d");
+            data = manda ? data.Split(".mp3")[0].Replace("%d", " ") + ".mp3" : data.Split(".mp3")[0] + ".mp3";
+            SendFile(stream, data, manda);
         }
         catch (Exception e)
         {
