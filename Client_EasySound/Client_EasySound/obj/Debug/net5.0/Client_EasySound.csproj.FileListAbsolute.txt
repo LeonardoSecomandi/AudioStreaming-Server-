@@ -73,7 +73,6 @@ C:\Users\Zaroual.17224\Documents\GitHub\AudioStreaming-Server-\Client_EasySound\
 C:\Users\Zaroual.17224\Documents\GitHub\AudioStreaming-Server-\Client_EasySound\Client_EasySound\obj\Debug\net5.0\Razor\Pages\Diverse pagine\fIRST.cshtml.g.cs
 C:\Users\Zaroual.17224\Documents\GitHub\AudioStreaming-Server-\Client_EasySound\Client_EasySound\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
 C:\Users\Zaroual.17224\Documents\GitHub\AudioStreaming-Server-\Client_EasySound\Client_EasySound\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
-C:\Users\Zaroual.17224\Documents\GitHub\AudioStreaming-Server-\Client_EasySound\Client_EasySound\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
 C:\Users\Zaroual.17224\Documents\GitHub\AudioStreaming-Server-\Client_EasySound\Client_EasySound\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\Zaroual.17224\Documents\GitHub\AudioStreaming-Server-\Client_EasySound\Client_EasySound\obj\Debug\net5.0\Razor\Pages\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\Zaroual.17224\Documents\GitHub\AudioStreaming-Server-\Client_EasySound\Client_EasySound\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
