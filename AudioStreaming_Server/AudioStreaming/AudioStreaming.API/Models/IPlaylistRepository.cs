@@ -13,5 +13,7 @@ namespace AudioStreaming.API.Models
         public Task<CreatePlaylistResponse> CreatePlaylist(CreatePlaylistRequest req);
         public Task<IEnumerable<Playlist>> GetPlaylist();
         public Task<GetUserPlaylistResponse> GetUserPlaylist(int IdUser);
+
+        public Task<DeletePlaylistResponse> DeletePlaylist(int idPlaylist);
     }
 }

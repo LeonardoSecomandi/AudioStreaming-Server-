@@ -2,6 +2,7 @@
 using AudioStreaming.API.Models.DTOS.Requests;
 using AudioStreaming.API.Models.DTOS.Responses;
 using AudioStreaming.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -23,23 +24,53 @@ namespace AudioStreaming.API.Controllers
         [HttpPost]
         public async Task<ActionResult<CreatePlaylistResponse>> CreatePlaylist(CreatePlaylistRequest req)
         {
-            var result = await _playlistRepository.CreatePlaylist(req);
-            return result;
+            try
+            {
+                var result = await _playlistRepository.CreatePlaylist(req);
+                return result;
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Errore nel recupero dati dal database");
+            }
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Playlist>> GetPlaylist()
+        public async Task <IEnumerable<Playlist>> GetPlaylist()
         {
-            var result = await _playlistRepository.GetPlaylist();
-            return result;
+                var result = await _playlistRepository.GetPlaylist();
+                return result;
         }
 
 
-        [HttpGet("userd/{id:int}")]
-        public async Task<GetUserPlaylistResponse> GetUserPlaylist(int id)
+        [HttpGet("user/{id:int}")]
+        public async Task<ActionResult<GetUserPlaylistResponse>> GetUserPlaylist(int id)
         {
-            var result = await _playlistRepository.GetUserPlaylist(id);
-            return result;
+            try
+            {
+                var result = await _playlistRepository.GetUserPlaylist(id);
+                return result;
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Errore nel recupero dati dal database");
+            }
+
+        }
+
+        [HttpDelete("delete/{idPlaylist:int}")]
+        public async Task<ActionResult<DeletePlaylistResponse>> DeletePlaylist(int idPlaylist)
+        {
+            try
+            {
+                var result = await _playlistRepository.DeletePlaylist(idPlaylist);
+                return result;
+            }
+            catch (Exception)
+            {
+                var result = await _playlistRepository.DeletePlaylist(idPlaylist);
+                return result;
+            }
         }
     }
 }

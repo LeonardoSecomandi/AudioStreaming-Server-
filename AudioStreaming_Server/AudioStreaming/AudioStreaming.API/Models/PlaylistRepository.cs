@@ -86,5 +86,29 @@ namespace AudioStreaming.API.Models
                 Message = "Sono state trovate " + UserPlaylist.Count() + " associate all'utente"
             };
         }
+
+        public async Task<DeletePlaylistResponse> DeletePlaylist(int idPlaylist)
+        {
+            var Playlist = await _context.Playlist.FirstOrDefaultAsync(x => x.PlaylistID == idPlaylist);
+            if (Playlist != null)
+            {
+                _context.Remove(Playlist);
+               await _context.SaveChangesAsync();
+                return new DeletePlaylistResponse()
+                {
+                    Success = true,
+                    DeletedPlaylist = Playlist,
+                    Message = "Playlist Eliminata",
+                    Errors = null
+                };
+            }
+            return new DeletePlaylistResponse()
+            {
+                Success = false,
+                DeletedPlaylist = null,
+                Message = "Playlist Non eliminata",
+                Errors = null
+            };
+        }
     }
 }
