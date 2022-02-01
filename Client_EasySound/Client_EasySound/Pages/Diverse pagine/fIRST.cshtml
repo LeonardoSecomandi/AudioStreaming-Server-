@@ -1,5 +1,39 @@
 ﻿@page
 @model Client_EasySound.Pages.Diverse_pagine.fIRSTModel
 @{
-
+    ViewData["Title"] = "Client";
 }
+<h1>Client</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.eleClient[0].id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.eleClient[0].utente)
+            </th>
+            <th><a asp-page="./Create">Create new</a></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.eleClient)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.utente)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
