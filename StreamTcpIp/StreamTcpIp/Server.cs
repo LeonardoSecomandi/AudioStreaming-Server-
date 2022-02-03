@@ -47,16 +47,12 @@ class Server
         {
             if (download)
             {
-                using (var fileIO = File.OpenRead(fileName))
-                using (var clientSocket = stream)
+                using (var fileIO = File.OpenRead(fileName))                
                 {
-                    // Send Length (Int64)
-                    //clientSocket.Write(fileIO.Length, 0, 8);
-
                     var buffer = new byte[1024 * 8];
                     int count;
                     while ((count = fileIO.Read(buffer, 0, buffer.Length)) > 0)
-                        clientSocket.Write(buffer, 0, count);
+                        stream.Write(buffer, 0, count);
                 }
             }
             else
@@ -67,8 +63,7 @@ class Server
         }
         else
             Console.WriteLine("File non esiste");        
-    }    
-
+    }
     public void HandleDeivce(Object obj)
     {
         TcpClient client = (TcpClient)obj;
@@ -84,13 +79,14 @@ class Server
             Console.WriteLine("{1}: Received: {0}", data, Thread.CurrentThread.ManagedThreadId);
             bool manda = data.Contains("%d");
             data = manda ? data.Split(".mp3")[0].Replace("%d", " ") + ".mp3" : data.Split(".mp3")[0] + ".mp3";
-            SendFile(stream, data, manda);
+            Console.WriteLine("Mandando file");
+            SendFile(stream, data.Trim(), manda);
+            Console.WriteLine("Finito di mandare file");
         }
         catch (Exception e)
         {
             Console.WriteLine("Exception: {0}", e.ToString());
             client.Close();
         }
-
     }
 }

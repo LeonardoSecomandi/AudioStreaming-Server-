@@ -11,7 +11,7 @@ using NAudio.Wave;
 
 namespace ClientTcpIp
 {
-    public class Mp3Streaming
+    public class Mp3Streaming : IDisposable
     {
         enum StreamingPlaybackState
         {
@@ -20,11 +20,14 @@ namespace ClientTcpIp
             Buffering,
             Paused
         }
+        public void Dispose() 
+        {
+            MP3StreamingPanel_Disposing(this,new StoppedEventArgs());
+        }
 
         public Mp3Streaming(NetworkStream ns)
         {
-            //volumeSlider1.VolumeChanged += OnVolumeSliderChanged;
-            //Disposed += MP3StreamingPanel_Disposing;
+            //volumeSlider1.VolumeChanged += OnVolumeSliderChanged;            
             
             this.networkStream = ns;
             timer1 = new System.Timers.Timer(250);            

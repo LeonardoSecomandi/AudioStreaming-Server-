@@ -12,8 +12,21 @@ namespace ClientTcpIp
     {        
         static void Main(string[] args)
         {
-            bool download = false   ;
-            string nomeCanzone = "Example1.mp3";
+            bool download;
+            string nomeCanzone;
+
+            Console.Write("Che canzone vuoi?: ");
+            nomeCanzone = Console.ReadLine();
+            nomeCanzone = nomeCanzone.Contains(".mp3") ? nomeCanzone : nomeCanzone + ".mp3";
+
+            string risposta;
+            do
+            {
+                Console.Write("Vuoi scaricarla? [y/n]: ");
+                risposta = Console.ReadLine();
+            } while (risposta != "y" && risposta != "n");
+
+            download = risposta == "y" ? true : false;
 
             if (download) nomeCanzone = "%d" + nomeCanzone;
 
@@ -44,24 +57,29 @@ namespace ClientTcpIp
                 }
                 else
                 {
-                    using (Stream file = File.Create("fileAudio.mp3"))
+                    using (var fileIO = File.Create(message.Replace("%d"," ")))
                     {
-                        //while (stream.Read()) 
-                        //{
-                        //    stream.CopyTo(file);
-                        //}
-                        
+                        var buffer = new byte[1024 * 8];
+                        int count;
+                        //bool continua = true;
+                        while ((count = stream.Read(buffer, 0, buffer.Length)) > 0/* && continua*/) 
+                        {
+                            fileIO.Write(buffer, 0, count);
+                            //foreach (var a in buffer)
+                            //    if (a != 0)
+                            //        continua = true;
+                        }                            
                     }
-                }       
-
-                Thread.Sleep(20);                
-
+                    Console.WriteLine("Scaricazione completata");                    
+                }
+                Thread.Sleep(20);
+                
                 stream.Close();
                 client.Close();
             }
             catch (Exception e)
             {
-                Console.WriteLine("Exception: {0}", e);
+                Console.WriteLine(e);
             }
             Console.Read();
         }
