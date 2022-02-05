@@ -10,6 +10,7 @@ namespace ClientTcpIp
 {
     class Program
     {        
+        
         static void Main(string[] args)
         {
             bool download;
@@ -49,11 +50,24 @@ namespace ClientTcpIp
 
                 NetworkStream stream = client.GetStream();
                 stream.Write(Encoding.ASCII.GetBytes(message));
-
-                if (!message.Contains("%d"))
+                if (message.StartsWith("%u")) 
+                {
+                    
+                }
+                if (!message.StartsWith("%d"))
                 {
                     var suona = new Mp3Streaming(stream);
-                    suona.Riproduci();
+                    new Thread(() => suona.Riproduci()).Start(); // avvia
+                    while (suona != null) 
+                    {
+                        //Thread.Sleep(5000);
+                        //new Thread(() => suona.Pausa()).Start(); // pausa
+                        //Thread.Sleep(2000);
+                        //new Thread(() => suona.Riproduci()).Start();
+                        //Thread.Sleep(5000);
+                        //new Thread(() => suona.Finisci()).Start(); // ferma
+                    }
+                    Console.WriteLine("finito di suonare");
                 }
                 else
                 {
@@ -61,13 +75,10 @@ namespace ClientTcpIp
                     {
                         var buffer = new byte[1024 * 8];
                         int count;
-                        //bool continua = true;
-                        while ((count = stream.Read(buffer, 0, buffer.Length)) > 0/* && continua*/) 
+                        
+                        while ((count = stream.Read(buffer, 0, buffer.Length)) > 0) 
                         {
-                            fileIO.Write(buffer, 0, count);
-                            //foreach (var a in buffer)
-                            //    if (a != 0)
-                            //        continua = true;
+                            fileIO.Write(buffer, 0, count);                            
                         }                            
                     }
                     Console.WriteLine("Scaricazione completata");                    
@@ -80,8 +91,7 @@ namespace ClientTcpIp
             catch (Exception e)
             {
                 Console.WriteLine(e);
-            }
-            Console.Read();
+            }            
         }
     }
 }

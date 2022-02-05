@@ -215,7 +215,7 @@ namespace ClientTcpIp
                     {
                         Play();
                     }
-                    else if (fullyDownloaded && bufferedSeconds == 0)
+                    else if (fullyDownloaded && bufferedSeconds < 1)
                     {
                         Console.WriteLine("Reached end of stream");
                         StopPlayback();
@@ -235,7 +235,13 @@ namespace ClientTcpIp
         {
             playbackState = StreamingPlaybackState.Buffering;
             waveOut.Pause();
-            Console.WriteLine(String.Format("Paused to buffer, waveOut.PlaybackState={0}", waveOut.PlaybackState));
+            if (bufferedWaveProvider.BufferedDuration.TotalSeconds < 1)
+                fullyDownloaded = true;
+
+            if(fullyDownloaded)
+                this.MP3StreamingPanel_Disposing(this,new StoppedEventArgs());
+            else
+                Console.WriteLine(String.Format("Paused to buffer, waveOut.PlaybackState={0}", waveOut.PlaybackState));
         }
 
         private IWavePlayer CreateWaveOut()
@@ -248,6 +254,11 @@ namespace ClientTcpIp
             StopPlayback();
         }
 
+        public void Pausa()
+        {
+            buttonPause_Click();
+        }
+
         private void buttonPause_Click()
         {
             if (playbackState == StreamingPlaybackState.Playing || playbackState == StreamingPlaybackState.Buffering)
@@ -256,6 +267,11 @@ namespace ClientTcpIp
                 Console.WriteLine(String.Format("User requested Pause, waveOut.PlaybackState={0}", waveOut.PlaybackState));
                 playbackState = StreamingPlaybackState.Paused;
             }
+        }
+
+        public void Finisci() 
+        {
+            buttonStop_Click();
         }
 
         private void buttonStop_Click()

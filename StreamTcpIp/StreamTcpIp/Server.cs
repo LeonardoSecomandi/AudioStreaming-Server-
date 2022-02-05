@@ -41,8 +41,9 @@ class Server
         }
     }
     
-    public static void SendFile(NetworkStream stream, string fileName, bool download)
+    public static void SendFile(TcpClient client, string fileName, bool download)
     {
+        NetworkStream stream = client.GetStream();
         if (File.Exists(fileName))
         {
             if (download)
@@ -54,11 +55,13 @@ class Server
                     while ((count = fileIO.Read(buffer, 0, buffer.Length)) > 0)
                         stream.Write(buffer, 0, count);
                 }
+                stream.Close();
+                client.Close();
             }
             else
             {
                 FileStream fileStream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
-                fileStream.CopyToAsync(stream);
+                fileStream.CopyTo(stream);
             }
         }
         else
@@ -73,6 +76,8 @@ class Server
         Byte[] bytes = new Byte[1028];
         try
         {
+            stream.Flush();
+            
             stream.Read(bytes);
             string hex = BitConverter.ToString(bytes);
             data = Encoding.ASCII.GetString(bytes, 0, bytes.Length);
@@ -80,8 +85,13 @@ class Server
             bool manda = data.Contains("%d");
             data = manda ? data.Split(".mp3")[0].Replace("%d", " ") + ".mp3" : data.Split(".mp3")[0] + ".mp3";
             Console.WriteLine("Mandando file");
-            SendFile(stream, data.Trim(), manda);
+            SendFile(client, data.Trim(), manda);
             Console.WriteLine("Finito di mandare file");
+            if (manda) {
+                stream.Close();
+                client.Close();
+            } 
+            
         }
         catch (Exception e)
         {
