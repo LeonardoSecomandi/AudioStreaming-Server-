@@ -82,20 +82,22 @@ class Server
             string hex = BitConverter.ToString(bytes);
             data = Encoding.ASCII.GetString(bytes, 0, bytes.Length);
             Console.WriteLine("{1}: Received: {0}", data, Thread.CurrentThread.ManagedThreadId);
-            bool manda = data.Contains("%d");
-            data = manda ? data.Split(".mp3")[0].Replace("%d", " ") + ".mp3" : data.Split(".mp3")[0] + ".mp3";
-            Console.WriteLine("Mandando file");
-            SendFile(client, data.Trim(), manda);
-            Console.WriteLine("Finito di mandare file");
-            if (manda) {
-                stream.Close();
-                client.Close();
-            } 
-            
+            bool manda = data.StartsWith("%d");
+            bool carica = data.StartsWith("%u");
+            if (!carica) { 
+                data = manda ? data.Split(".mp3")[0].Replace("%d", " ") + ".mp3" : data.Split(".mp3")[0] + ".mp3";
+                Console.WriteLine("Mandando file");
+                SendFile(client, data.Trim(), manda);
+                Console.WriteLine("Finito di mandare file");
+                if (manda) {
+                    stream.Close();
+                    client.Close();
+                }
+            }
         }
         catch (Exception e)
         {
-            Console.WriteLine("Exception: {0}", e.ToString());
+            Console.WriteLine("Exception: " + e.ToString());
             client.Close();
         }
     }
