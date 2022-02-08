@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace AudioStreaming.Models
@@ -24,5 +26,7 @@ namespace AudioStreaming.Models
 
         [Required]
         public int DownnloadNumber { get; set; }
+
+        public ICollection<Playlist> ElePlaylist { get; set; }
     }
 }

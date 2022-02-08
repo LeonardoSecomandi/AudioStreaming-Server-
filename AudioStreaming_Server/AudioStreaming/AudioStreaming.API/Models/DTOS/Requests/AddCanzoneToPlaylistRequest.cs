@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace AudioStreaming.API.Models.DTOS.Requests
 {
-    public class CreatePlaylistRequest
+    public class AddCanzoneToPlaylistRequest
     {
         [Required]
-        public string PlayListTitle { get; set; }
+        public int IdPlaylist { get; set; }
 
         [Required]
-        public int UserId { get; set; }
+        public int idCanzone { get; set; }
 
-        [Required]
-        public bool Private { get; set; }
     }
 }

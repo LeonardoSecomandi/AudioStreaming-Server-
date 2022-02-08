@@ -34,7 +34,6 @@ namespace AudioStreaming.API.Models
             var newPlaylist = new Playlist()
             {
                 Name = req.PlayListTitle,
-                SongsIDs = req.SongsIDs,
                 UserID = req.UserId,
                 Private = req.Private
             };
@@ -109,6 +108,45 @@ namespace AudioStreaming.API.Models
                 Message = "Playlist Non eliminata",
                 Errors = null
             };
+        }
+
+        public async Task<AddCanzoneToPlaylistResponse> AddCanzoneToPlaylist(AddCanzoneToPlaylistRequest req)
+        {
+            var isPlaylist = await _context.Playlist.FirstOrDefaultAsync(x => x.PlaylistID == req.idCanzone);
+            if (isPlaylist is null)
+                return new AddCanzoneToPlaylistResponse()
+                {
+                    Success = false,
+                    Errors = null,
+                    Message = "errore nel recupero della playlist"
+                };
+            var isCanzone = await _context.Canzoni.FirstOrDefaultAsync(X => X.SongID == req.idCanzone);
+            if(isCanzone is null)
+                return new AddCanzoneToPlaylistResponse()
+                {
+                    Success = false,
+                    Errors = null,
+                    Message = "errore nel recupero della canzone"
+                };
+
+            if(isPlaylist.EleCanzoni is null)
+            {
+                isPlaylist.EleCanzoni = new List<Canzone>();
+            }
+            if (isCanzone.ElePlaylist is null)
+                isPlaylist.EleCanzoni = new List<Canzone>();
+
+            isPlaylist.EleCanzoni.Add(isCanzone);
+            isCanzone.ElePlaylist.Add(isPlaylist);
+            await _context.SaveChangesAsync();
+            //var b = await _context.Playlist.FirstOrDefaultAsync(x => x.PlaylistID == req.IdPlaylist);
+            return new AddCanzoneToPlaylistResponse()
+            {
+                Success = true,
+                Errors = null,
+                Message = "Canzone aggiunta alla playlist"
+            };
+
         }
     }
 }

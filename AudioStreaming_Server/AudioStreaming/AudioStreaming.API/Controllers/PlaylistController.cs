@@ -71,8 +71,21 @@ namespace AudioStreaming.API.Controllers
             }
             catch (Exception)
             {
-                var result = await _playlistRepository.DeletePlaylist(idPlaylist);
+                return StatusCode(StatusCodes.Status500InternalServerError, "Errore nel recupero dati dal database");
+            }
+        }
+
+        [HttpPost("addcanzonetoplaylist")]
+        public async Task<ActionResult<AddCanzoneToPlaylistResponse>> AddCanzoneToPlaylist(AddCanzoneToPlaylistRequest req)
+        {
+            try
+            {
+                var result = await _playlistRepository.AddCanzoneToPlaylist(req);
                 return result;
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Errore nel recupero dati dal database");
             }
         }
     }

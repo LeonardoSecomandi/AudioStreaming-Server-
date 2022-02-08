@@ -92,8 +92,8 @@ namespace AudioStreaming.API
                         IssuerSigningKey = new SymmetricSecurityKey(key),
                         ValidateIssuer = false,
                         ValidateAudience = false,
-                        ValidateLifetime = true,
-                        RequireExpirationTime = false
+                        ValidateLifetime = false,
+                        RequireExpirationTime = false,
                     };
                 });
 
