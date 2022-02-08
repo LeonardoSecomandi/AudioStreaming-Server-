@@ -90,12 +90,12 @@ namespace ClientTcpIp
                     new Thread(() => suona.Riproduci()).Start(); // avvia
                     while (suona != null) 
                     {
-                        //Thread.Sleep(5000);
+                        Thread.Sleep(3000);
                         //new Thread(() => suona.Pausa()).Start(); // pausa
                         //Thread.Sleep(2000);
                         //new Thread(() => suona.Riproduci()).Start();
                         //Thread.Sleep(5000);
-                        //new Thread(() => suona.Finisci()).Start(); // ferma
+                        new Thread(() => suona.Finisci()).Start(); // ferma
                     }
                     Console.WriteLine("finito di suonare");
                 }

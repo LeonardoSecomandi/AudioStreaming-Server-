@@ -80,9 +80,10 @@ namespace ClientTcpIp
                             break;
                         }
                     }
-                    catch (Exception e) 
+                    catch (ObjectDisposedException) 
                     {
-                        Console.WriteLine(e.Message);
+                        this.Dispose();
+                        Console.WriteLine("Oggetto disposed");                        
                     }
                 }
             }

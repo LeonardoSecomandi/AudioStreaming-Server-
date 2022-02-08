@@ -77,7 +77,10 @@ namespace ClientTcpIp
                             Mp3Frame frame;
                             try
                             {
-                                frame = Mp3Frame.LoadFromStream(readFullyStream);
+                                if (playbackState == StreamingPlaybackState.Stopped)
+                                    break;
+                                
+                                frame = Mp3Frame.LoadFromStream(readFullyStream);                                
                             }
                             catch (EndOfStreamException)
                             {
@@ -111,7 +114,7 @@ namespace ClientTcpIp
                     Console.WriteLine("Exiting");
                     // was doing this in a finally block, but for some reason
                     // we are hanging on response stream .Dispose so never get there
-                    decompressor.Dispose();
+                    decompressor?.Dispose();
                 }
             }
             finally
