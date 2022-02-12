@@ -20,6 +20,6 @@ namespace AudioStreaming.Models
         [Required]
         public int UserID { get; set; }
 
-        public ICollection<Canzone> EleCanzoni { get; set; }
+        public ICollection<Canzone> Canzones { get; set; }
     }
 }

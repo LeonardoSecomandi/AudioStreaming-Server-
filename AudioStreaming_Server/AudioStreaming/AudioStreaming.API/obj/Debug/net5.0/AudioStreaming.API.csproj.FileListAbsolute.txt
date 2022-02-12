@@ -243,7 +243,6 @@ C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Se
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\bin\Debug\net5.0\AudioStreaming.Models.dll
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\bin\Debug\net5.0\AudioStreaming.Models.pdb
-C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.csproj.AssemblyReference.cache
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.AssemblyInfoInputs.cache
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.AssemblyInfo.cs
@@ -327,3 +326,4 @@ C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_
 C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\ref\AudioStreaming.API.dll
 C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.pdb
 C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.genruntimeconfig.cache
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.csprojAssemblyReference.cache

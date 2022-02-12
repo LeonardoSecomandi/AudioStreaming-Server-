@@ -129,15 +129,26 @@ namespace AudioStreaming.API.Models
                     Message = "errore nel recupero della canzone"
                 };
 
-            if(isPlaylist.EleCanzoni is null)
+            var newRelation= new CanzonePlaylist()
             {
-                isPlaylist.EleCanzoni = new List<Canzone>();
-            }
-            if (isCanzone.ElePlaylist is null)
-                isPlaylist.EleCanzoni = new List<Canzone>();
+                SongID = isCanzone.SongID,
+                PlaylistID = isPlaylist.PlaylistID,
+                Canzone = isCanzone,
+                Playlist = isPlaylist
+            };
 
-            isPlaylist.EleCanzoni.Add(isCanzone);
-            isCanzone.ElePlaylist.Add(isPlaylist);
+            await _context.Canzone_Playlist.AddAsync(newRelation);
+
+
+            //if (isPlaylist.Canzones is null)
+            //{
+            //    isPlaylist.Canzones = new List<Canzone_Playlist>();
+            //}
+            //if (isCanzone.Playlists is null)
+            //    isCanzone.Playlists = new List<Canzone_Playlist>();
+
+            //isPlaylist.Canzones.Add(newRelation);
+            //isCanzone.Playlists.Add(newRelation);
             await _context.SaveChangesAsync();
             //var b = await _context.Playlist.FirstOrDefaultAsync(x => x.PlaylistID == req.IdPlaylist);
             return new AddCanzoneToPlaylistResponse()

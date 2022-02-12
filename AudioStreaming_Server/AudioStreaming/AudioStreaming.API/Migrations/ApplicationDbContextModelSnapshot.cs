@@ -42,6 +42,27 @@ namespace AudioStreaming.API.Migrations
                     b.ToTable("Canzoni");
                 });
 
+            modelBuilder.Entity("AudioStreaming.Models.Canzone_Playlist", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PlaylistID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SongID")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("PlaylistID");
+
+                    b.HasIndex("SongID");
+
+                    b.ToTable("Canzone_Playlist");
+                });
+
             modelBuilder.Entity("AudioStreaming.Models.Playlist", b =>
                 {
                     b.Property<int>("PlaylistID")
@@ -63,34 +84,33 @@ namespace AudioStreaming.API.Migrations
                     b.ToTable("Playlist");
                 });
 
-            modelBuilder.Entity("CanzonePlaylist", b =>
+            modelBuilder.Entity("AudioStreaming.Models.Canzone_Playlist", b =>
                 {
-                    b.Property<int>("EleCanzoniSongID")
-                        .HasColumnType("INTEGER");
+                    b.HasOne("AudioStreaming.Models.Playlist", "Playlist")
+                        .WithMany("Canzones")
+                        .HasForeignKey("PlaylistID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Property<int>("ElePlaylistPlaylistID")
-                        .HasColumnType("INTEGER");
+                    b.HasOne("AudioStreaming.Models.Canzone", "Canzone")
+                        .WithMany("Playlists")
+                        .HasForeignKey("SongID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasKey("EleCanzoniSongID", "ElePlaylistPlaylistID");
+                    b.Navigation("Canzone");
 
-                    b.HasIndex("ElePlaylistPlaylistID");
-
-                    b.ToTable("CanzonePlaylist");
+                    b.Navigation("Playlist");
                 });
 
-            modelBuilder.Entity("CanzonePlaylist", b =>
+            modelBuilder.Entity("AudioStreaming.Models.Canzone", b =>
                 {
-                    b.HasOne("AudioStreaming.Models.Canzone", null)
-                        .WithMany()
-                        .HasForeignKey("EleCanzoniSongID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Playlists");
+                });
 
-                    b.HasOne("AudioStreaming.Models.Playlist", null)
-                        .WithMany()
-                        .HasForeignKey("ElePlaylistPlaylistID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+            modelBuilder.Entity("AudioStreaming.Models.Playlist", b =>
+                {
+                    b.Navigation("Canzones");
                 });
 #pragma warning restore 612, 618
         }
