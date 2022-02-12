@@ -4,14 +4,114 @@
     "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Test\\AudioStreaming.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Test\\AudioStreaming.Test.csproj": {
+    "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Test\\AudioStreaming.Test.csproj",
-        "projectName": "AudioStreaming.Test",
-        "projectPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Test\\AudioStreaming.Test.csproj",
+        "projectUniqueName": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
+        "projectName": "AudioStreaming.API",
+        "projectPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
         "packagesPath": "C:\\Users\\rota.18353\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Test\\obj\\",
+        "outputPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rota.18353\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
+                "projectPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
+        "projectName": "AudioStreaming.Models",
+        "projectPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
+        "packagesPath": "C:\\Users\\rota.18353\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,6 +142,70 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Test\\AudioStreaming.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Test\\AudioStreaming.Test.csproj",
+        "projectName": "AudioStreaming.Test",
+        "projectPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Test\\AudioStreaming.Test.csproj",
+        "packagesPath": "C:\\Users\\rota.18353\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rota.18353\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj": {
+                "projectPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj"
+              },
+              "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
+                "projectPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -75,6 +239,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
