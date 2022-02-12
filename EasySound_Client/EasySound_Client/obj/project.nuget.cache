@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "i/5bUdTdhmO7FhlugnfoMUvTpJjEIojfWPcZEqo0zMOueCWNXuljahJUYirCA5hWyItRwmeulYfzsi4W5KjaKg==",
+  "success": true,
+  "projectFilePath": "F:\\EasySound_Client\\EasySound_Client\\EasySound_Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Zaroual.17224\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
