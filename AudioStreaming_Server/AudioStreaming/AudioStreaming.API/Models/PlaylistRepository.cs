@@ -112,7 +112,7 @@ namespace AudioStreaming.API.Models
 
         public async Task<AddCanzoneToPlaylistResponse> AddCanzoneToPlaylist(AddCanzoneToPlaylistRequest req)
         {
-            var isPlaylist = await _context.Playlist.FirstOrDefaultAsync(x => x.PlaylistID == req.idCanzone);
+            var isPlaylist = await _context.Playlist.FirstOrDefaultAsync(x => x.PlaylistID == req.IdPlaylist);
             if (isPlaylist is null)
                 return new AddCanzoneToPlaylistResponse()
                 {
@@ -137,18 +137,18 @@ namespace AudioStreaming.API.Models
                 Playlist = isPlaylist
             };
 
-            await _context.Canzone_Playlist.AddAsync(newRelation);
+            // await _context.Canzone_Playlist.AddAsync(newRelation);
 
 
-            //if (isPlaylist.Canzones is null)
-            //{
-            //    isPlaylist.Canzones = new List<Canzone_Playlist>();
-            //}
-            //if (isCanzone.Playlists is null)
-            //    isCanzone.Playlists = new List<Canzone_Playlist>();
+            if (isPlaylist.Canzones is null)
+            {
+                isPlaylist.Canzones = new List<Canzone>();
+            }
+            if (isCanzone.Playlists is null)
+                isCanzone.Playlists = new List<Playlist>();
 
-            //isPlaylist.Canzones.Add(newRelation);
-            //isCanzone.Playlists.Add(newRelation);
+            isPlaylist.Canzones.Add(isCanzone);
+            isCanzone.Playlists.Add(isPlaylist);
             await _context.SaveChangesAsync();
             //var b = await _context.Playlist.FirstOrDefaultAsync(x => x.PlaylistID == req.IdPlaylist);
             return new AddCanzoneToPlaylistResponse()

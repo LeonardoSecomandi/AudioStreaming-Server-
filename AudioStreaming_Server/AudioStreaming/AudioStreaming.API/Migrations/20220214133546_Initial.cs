@@ -39,46 +39,54 @@ namespace AudioStreaming.API.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Canzone_Playlist",
+                name: "CanzonePlaylist",
                 columns: table => new
                 {
-                    id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    SongID = table.Column<int>(type: "INTEGER", nullable: false),
-                    PlaylistID = table.Column<int>(type: "INTEGER", nullable: false)
+                    CanzonesSongID = table.Column<int>(type: "INTEGER", nullable: false),
+                    PlaylistsPlaylistID = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Canzone_Playlist", x => x.id);
+                    table.PrimaryKey("PK_CanzonePlaylist", x => new { x.CanzonesSongID, x.PlaylistsPlaylistID });
                     table.ForeignKey(
-                        name: "FK_Canzone_Playlist_Canzoni_SongID",
-                        column: x => x.SongID,
+                        name: "FK_CanzonePlaylist_Canzoni_CanzonesSongID",
+                        column: x => x.CanzonesSongID,
                         principalTable: "Canzoni",
                         principalColumn: "SongID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Canzone_Playlist_Playlist_PlaylistID",
-                        column: x => x.PlaylistID,
+                        name: "FK_CanzonePlaylist_Playlist_PlaylistsPlaylistID",
+                        column: x => x.PlaylistsPlaylistID,
                         principalTable: "Playlist",
                         principalColumn: "PlaylistID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Canzone_Playlist_PlaylistID",
-                table: "Canzone_Playlist",
-                column: "PlaylistID");
+            migrationBuilder.InsertData(
+                table: "Canzoni",
+                columns: new[] { "SongID", "AlbumName", "DownnloadNumber", "Duration", "IDUserUploader", "SongTitle" },
+                values: new object[] { 1, "Album1", 0, 120, 1, "Canzone1" });
+
+            migrationBuilder.InsertData(
+                table: "Playlist",
+                columns: new[] { "PlaylistID", "Name", "Private", "UserID" },
+                values: new object[] { 1, "Playlist1", true, 1 });
+
+            migrationBuilder.InsertData(
+                table: "CanzonePlaylist",
+                columns: new[] { "CanzonesSongID", "PlaylistsPlaylistID" },
+                values: new object[] { 1, 1 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Canzone_Playlist_SongID",
-                table: "Canzone_Playlist",
-                column: "SongID");
+                name: "IX_CanzonePlaylist_PlaylistsPlaylistID",
+                table: "CanzonePlaylist",
+                column: "PlaylistsPlaylistID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Canzone_Playlist");
+                name: "CanzonePlaylist");
 
             migrationBuilder.DropTable(
                 name: "Canzoni");
