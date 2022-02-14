@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AudioStreaming.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220214133546_Initial")]
+    [Migration("20220214153307_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,17 +42,24 @@ namespace AudioStreaming.API.Migrations
                     b.HasKey("SongID");
 
                     b.ToTable("Canzoni");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            SongID = 1,
-                            AlbumName = "Album1",
-                            DownnloadNumber = 0,
-                            Duration = 120,
-                            IDUserUploader = 1,
-                            SongTitle = "Canzone1"
-                        });
+            modelBuilder.Entity("AudioStreaming.Models.CanzonePlaylist", b =>
+                {
+                    b.Property<int>("SongID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PlaylistID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("id")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("SongID", "PlaylistID");
+
+                    b.HasIndex("PlaylistID");
+
+                    b.ToTable("CanzonePlaylists");
                 });
 
             modelBuilder.Entity("AudioStreaming.Models.Playlist", b =>
@@ -74,52 +81,35 @@ namespace AudioStreaming.API.Migrations
                     b.HasKey("PlaylistID");
 
                     b.ToTable("Playlist");
-
-                    b.HasData(
-                        new
-                        {
-                            PlaylistID = 1,
-                            Name = "Playlist1",
-                            Private = true,
-                            UserID = 1
-                        });
                 });
 
-            modelBuilder.Entity("CanzonePlaylist", b =>
+            modelBuilder.Entity("AudioStreaming.Models.CanzonePlaylist", b =>
                 {
-                    b.Property<int>("CanzonesSongID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("PlaylistsPlaylistID")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("CanzonesSongID", "PlaylistsPlaylistID");
-
-                    b.HasIndex("PlaylistsPlaylistID");
-
-                    b.ToTable("CanzonePlaylist");
-
-                    b.HasData(
-                        new
-                        {
-                            CanzonesSongID = 1,
-                            PlaylistsPlaylistID = 1
-                        });
-                });
-
-            modelBuilder.Entity("CanzonePlaylist", b =>
-                {
-                    b.HasOne("AudioStreaming.Models.Canzone", null)
-                        .WithMany()
-                        .HasForeignKey("CanzonesSongID")
+                    b.HasOne("AudioStreaming.Models.Playlist", "Playlist")
+                        .WithMany("CanzonePlaylist")
+                        .HasForeignKey("PlaylistID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AudioStreaming.Models.Playlist", null)
-                        .WithMany()
-                        .HasForeignKey("PlaylistsPlaylistID")
+                    b.HasOne("AudioStreaming.Models.Canzone", "Canzone")
+                        .WithMany("CanzonePlaylist")
+                        .HasForeignKey("SongID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Canzone");
+
+                    b.Navigation("Playlist");
+                });
+
+            modelBuilder.Entity("AudioStreaming.Models.Canzone", b =>
+                {
+                    b.Navigation("CanzonePlaylist");
+                });
+
+            modelBuilder.Entity("AudioStreaming.Models.Playlist", b =>
+                {
+                    b.Navigation("CanzonePlaylist");
                 });
 #pragma warning restore 612, 618
         }

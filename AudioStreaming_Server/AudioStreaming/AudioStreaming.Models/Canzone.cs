@@ -27,6 +27,6 @@ namespace AudioStreaming.Models
         [Required]
         public int DownnloadNumber { get; set; }
 
-        public ICollection<Playlist> Playlists { get; set; }
+        public ICollection<CanzonePlaylist> CanzonePlaylist { get; set; }
     }
 }

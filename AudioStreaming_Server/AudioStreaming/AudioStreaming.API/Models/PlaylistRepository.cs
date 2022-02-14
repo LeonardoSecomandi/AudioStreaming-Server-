@@ -61,7 +61,15 @@ namespace AudioStreaming.API.Models
 
         public async Task<IEnumerable<Playlist>> GetPlaylist()
         {
-            return await _context.Playlist.ToListAsync();
+            List<Playlist> ElePlaylist = new List<Playlist>();
+            var Playlist = await _context.Playlist.ToListAsync();
+            var CanzonePlaylist = await _context.CanzonePlaylists.ToListAsync();
+            foreach(var item in Playlist)
+            {
+                item.CanzonePlaylist = CanzonePlaylist.Where(x=>x.PlaylistID==item.PlaylistID).ToList();
+                ElePlaylist.Add(item);
+            }
+            return ElePlaylist;
         }
 
         public async Task<GetUserPlaylistResponse> GetUserPlaylist(int IdUser)
@@ -140,15 +148,15 @@ namespace AudioStreaming.API.Models
             // await _context.Canzone_Playlist.AddAsync(newRelation);
 
 
-            if (isPlaylist.Canzones is null)
+            if (isPlaylist.CanzonePlaylist is null)
             {
-                isPlaylist.Canzones = new List<Canzone>();
+                isPlaylist.CanzonePlaylist = new List<CanzonePlaylist>();
             }
-            if (isCanzone.Playlists is null)
-                isCanzone.Playlists = new List<Playlist>();
+            if (isCanzone.CanzonePlaylist is null)
+                isCanzone.CanzonePlaylist = new List<CanzonePlaylist>();
 
-            isPlaylist.Canzones.Add(isCanzone);
-            isCanzone.Playlists.Add(isPlaylist);
+            isPlaylist.CanzonePlaylist.Add(newRelation);
+            isCanzone.CanzonePlaylist.Add(newRelation);
             await _context.SaveChangesAsync();
             //var b = await _context.Playlist.FirstOrDefaultAsync(x => x.PlaylistID == req.IdPlaylist);
             return new AddCanzoneToPlaylistResponse()

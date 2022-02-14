@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj": {}
+    "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj": {
+    "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
+        "projectUniqueName": "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
         "projectName": "AudioStreaming.API",
-        "projectPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
-        "packagesPath": "C:\\Users\\secomandi.17131\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\obj\\",
+        "projectPath": "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
+        "packagesPath": "C:\\Users\\leose\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\secomandi.17131\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\leose\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -33,8 +31,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
-                "projectPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
+              "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
+                "projectPath": "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
               }
             }
           }
@@ -75,6 +73,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -102,23 +104,21 @@
         }
       }
     },
-    "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
+    "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
+        "projectUniqueName": "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
         "projectName": "AudioStreaming.Models",
-        "projectPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
-        "packagesPath": "C:\\Users\\secomandi.17131\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\obj\\",
+        "projectPath": "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
+        "packagesPath": "C:\\Users\\leose\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\secomandi.17131\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\leose\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
