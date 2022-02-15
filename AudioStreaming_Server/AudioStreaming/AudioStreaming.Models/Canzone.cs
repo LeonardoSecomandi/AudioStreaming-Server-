@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace AudioStreaming.Models
 {
@@ -27,6 +28,7 @@ namespace AudioStreaming.Models
         [Required]
         public int DownnloadNumber { get; set; }
 
+        [JsonIgnore]
         public ICollection<CanzonePlaylist> CanzonePlaylist { get; set; }
     }
 }

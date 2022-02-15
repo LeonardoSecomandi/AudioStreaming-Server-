@@ -9,6 +9,7 @@ namespace AudioStreaming.Models
     public class CanzonePlaylist
     {
         [Key]
+        [JsonIgnore]
         public int id { get; set; }
 
         [Required]

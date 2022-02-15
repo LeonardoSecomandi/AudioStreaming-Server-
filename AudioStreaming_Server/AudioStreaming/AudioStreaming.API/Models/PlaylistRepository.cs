@@ -129,7 +129,18 @@ namespace AudioStreaming.API.Models
                     Message = "errore nel recupero della playlist"
                 };
             var isCanzone = await _context.Canzoni.FirstOrDefaultAsync(X => X.SongID == req.idCanzone);
-            if(isCanzone is null)
+
+
+           var ispresent=await _context.CanzonePlaylists.FirstOrDefaultAsync(x => x.PlaylistID == isPlaylist.PlaylistID && x.Canzone.SongID == isCanzone.SongID);
+            if(ispresent!=null)
+                return new AddCanzoneToPlaylistResponse()
+                {
+                    Success = false,
+                    Errors = null,
+                    Message = "canzone già presente nella playlist"
+                };
+
+            if (isCanzone is null)
                 return new AddCanzoneToPlaylistResponse()
                 {
                     Success = false,
