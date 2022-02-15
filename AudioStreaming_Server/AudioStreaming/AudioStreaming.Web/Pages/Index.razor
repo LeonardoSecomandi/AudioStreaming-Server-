@@ -1,0 +1,14 @@
+﻿@page "/"
+@inherits IndexBase
+
+<AuthorizeView>
+    <Authorized>
+        <h2>Home</h2>
+        
+    </Authorized>
+    <NotAuthorized>
+        <h2>Loggati</h2>
+    </NotAuthorized>
+</AuthorizeView>
+
+
