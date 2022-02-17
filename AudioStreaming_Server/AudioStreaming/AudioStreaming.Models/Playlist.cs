@@ -15,12 +15,11 @@ namespace AudioStreaming.Models
         public string Name { get; set; }
 
         [Required]
-        public string SongsIDs { get; set; }
-
-        [Required]
         public bool Private { get; set; }
 
         [Required]
         public int UserID { get; set; }
+
+        public ICollection<CanzonePlaylist> CanzonePlaylist { get; set; }
     }
 }

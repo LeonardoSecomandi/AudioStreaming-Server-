@@ -1,4 +1,5 @@
 ﻿using AudioStreaming.API.Models;
+using AudioStreaming.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -15,6 +16,6 @@ namespace AudioStreaming.API.Data
         {
 
         }
-
+        public DbSet<UserTokens> UserTokens { get; set; }
     }
 }
