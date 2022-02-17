@@ -1,0 +1,29 @@
+﻿@charset "UTF-8";
+body
+{
+    margin:0;
+    padding:0;
+    font-family:montserrat;
+    background:linear-gradient(120deg,#366a94,#be6ee0);
+    height:100vh;
+    overflow:hidden;
+}
+.center
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:45px;
+    background:linear-gradient(120deg,#b6ff00,#ff006e);
+    border-radius:15px;
+}
+
+    .center form   
+    {
+        padding:0 40px;
+        box-sizing:border-box;
+    }
+
+
+
