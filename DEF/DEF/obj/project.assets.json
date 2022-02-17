@@ -8848,11 +8848,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\DEF\\DEF\\DEF.csproj",
+      "projectUniqueName": "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\DEF\\DEF\\DEF.csproj",
       "projectName": "DEF",
-      "projectPath": "G:\\DEF\\DEF\\DEF.csproj",
+      "projectPath": "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\DEF\\DEF\\DEF.csproj",
       "packagesPath": "C:\\Users\\Zaroual.17224\\.nuget\\packages\\",
-      "outputPath": "G:\\DEF\\DEF\\obj\\",
+      "outputPath": "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\DEF\\DEF\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
