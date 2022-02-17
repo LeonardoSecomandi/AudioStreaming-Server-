@@ -16,24 +16,25 @@
                 </tr>
             </thead>
             <tbody>
-                @if (EleCanzoni!=null)
+                @if (EleCanzoni != null)
                 {
 
 
                     @foreach (var c in EleCanzoni)
                     {
-                    <tr>
-
-                        
-                        <th scope="row">1</th>
-                        <td>@c.SongTitle</td>
-                        <td>@c.AlbumName</td>
-                        <td>@c.Duration</td>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>@c.SongTitle</td>
+                            <td>@c.AlbumName</td>
+                            <td>@c.Duration</td>
                         </tr>
                     }
                 }
-                </tbody>
+            </tbody>
         </table>
+        <h2>Playlist</h2>
+
+
 
     </Authorized>
     <NotAuthorized>
