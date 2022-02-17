@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gOQYwXaLMWP4957UCU8C1IepIwPIazCehmia0ojUql6D6b2Ofwyshyhm3HxZsSQOyqZ0xNVv8cyWZAQP8I2LrQ==",
+  "dgSpecHash": "03MCrbHtZcexTZ+usDae3ln35/ttAv/azQ95g2VeHmseyYKPcR7xHdsmV71BDghKmk0QH0okaQwmkTEDzo6tyw==",
   "success": true,
   "projectFilePath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
   "expectedPackageFiles": [
@@ -56,7 +56,7 @@
     "C:\\Users\\finazzi.17122\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
     "C:\\Users\\finazzi.17122\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.7.1\\system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
     "C:\\Users\\finazzi.17122\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\finazzi.17122\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

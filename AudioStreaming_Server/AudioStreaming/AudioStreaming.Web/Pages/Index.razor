@@ -9,37 +9,44 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
+
                     <th scope="col">Titolo</th>
                     <th scope="col">Album</th>
                     <th scope="col">Durata</th>
-
+                    <th>Play</th>
                 </tr>
             </thead>
             <tbody>
+
                 @if (EleCanzoni != null)
                 {
 
-
                     @foreach (var c in EleCanzoni)
                     {
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>@c.SongTitle</td>
-                            <td>@c.AlbumName</td>
-                            <td>@c.Duration</td>
-                        </tr>
-                    }
+                <tr >
+                    <th scope="row">1</th>
+                    <td>@c.SongTitle</td>
+                    <td>@c.AlbumName</td>
+                    <td>@c.Duration</td>
+                    <td @onclick="()=>ClickHandle(c.SongTitle)">sos</td>
+                </tr>
+                    
                 }
-            </tbody>
-        </table>
-        <h2>Playlist</h2>
+                }
 
 
 
-    </Authorized>
-    <NotAuthorized>
-        <h2>Loggati</h2>
-    </NotAuthorized>
-</AuthorizeView>
+                </tbody>
+            </table>
+            <a class="TitleLable">Current:@CurrentPlayingSong</a>
+            <h2>Playlist</h2>
+
+
+
+        </Authorized>
+        <NotAuthorized>
+            <h2>Loggati</h2>
+        </NotAuthorized>
+    </AuthorizeView>
 
 

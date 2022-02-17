@@ -1,0 +1,21 @@
+﻿@using AudioStreaming.Models;
+
+
+    <tr class="@Status">
+        <th scope="row">1</th>
+        <td>@canzone.SongTitle</td>
+        <td>@canzone.AlbumName</td>
+        <td>@canzone.Duration</td>
+    </tr>
+
+
+@code {
+
+    [Parameter]
+    public Canzone canzone { get; set; }
+
+    public string Status { get; set; }
+
+    
+
+}

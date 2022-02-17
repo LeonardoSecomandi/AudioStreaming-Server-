@@ -397,4 +397,4 @@ D:\GitHub\repository1\AudioStreaming-Server-\AudioStreaming_Server\AudioStreamin
 D:\GitHub\repository1\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\bin\Debug\net5.0\Newtonsoft.Json.dll
-C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.csproj.AssemblyReference.cache
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.csprojAssemblyReference.cache

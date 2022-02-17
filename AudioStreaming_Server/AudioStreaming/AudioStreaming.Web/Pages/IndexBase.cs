@@ -13,12 +13,24 @@ namespace AudioStreaming.Web.Pages
         [Inject]
         public ICanzoniService canzoniService { get; set; }
 
+        [Inject]
+        public NavigationManager nv { get; set; }
+
         public IEnumerable<Canzone> EleCanzoni { get; set; }
+
+        public static string CurrentPlayingSong { get; set; }
+
+        //public string Status { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
             EleCanzoni = await canzoniService.GetCanzoni();
             return;
+        }
+
+        public void ClickHandle(string Title)
+        {
+            CurrentPlayingSong = Title;
         }
     }
 }

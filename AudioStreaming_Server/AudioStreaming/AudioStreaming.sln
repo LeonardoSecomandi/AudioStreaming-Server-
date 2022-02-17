@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AudioStreaming.API", "Audio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AudioStreaming.Models", "AudioStreaming.Models\AudioStreaming.Models.csproj", "{2D132246-4F1C-4284-8C23-6524B1C1280F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioStreaming.Web", "AudioStreaming.Web\AudioStreaming.Web.csproj", "{C5962E86-E6DA-4088-9D1F-0C41619FCE90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AudioStreaming.Web", "AudioStreaming.Web\AudioStreaming.Web.csproj", "{C5962E86-E6DA-4088-9D1F-0C41619FCE90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
