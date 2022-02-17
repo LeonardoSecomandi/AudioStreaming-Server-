@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ANyGNFEK2UUM18iNKPv7FuMsFkzB4E8j72cHOXXayC0ZEGXHM0vwxINj06/+5E4RErEZWhgRsUE1NhW+KH0K1w==",
+  "dgSpecHash": "JNI5xHPpiO4P45B+NQwcIdsuVJQFoEYDGzZWdxiNOvrDjMNjwhrDBg77drTkOunyID1zwbts6342uOLvDkYp3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Zaroual.17224\\Desktop\\demo1\\demo1\\demo1.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Zaroual.17224\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\AudioStreaming-Server-\\demo1\\demo1\\demo1.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
