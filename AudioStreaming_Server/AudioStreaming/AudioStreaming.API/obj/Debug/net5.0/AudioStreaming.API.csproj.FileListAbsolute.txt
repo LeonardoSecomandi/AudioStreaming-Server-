@@ -326,7 +326,6 @@ C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_
 C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\ref\AudioStreaming.API.dll
 C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.pdb
 C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.genruntimeconfig.cache
-C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.csprojAssemblyReference.cache
 D:\GitHub\repository1\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.csprojAssemblyReference.cache
 D:\GitHub\repository1\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.GeneratedMSBuildEditorConfig.editorconfig
 D:\GitHub\repository1\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.AssemblyInfoInputs.cache
@@ -397,3 +396,5 @@ D:\GitHub\repository1\AudioStreaming-Server-\AudioStreaming_Server\AudioStreamin
 D:\GitHub\repository1\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.genruntimeconfig.cache
 D:\GitHub\repository1\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\secomandi.17131\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.API\obj\Debug\net5.0\AudioStreaming.API.csproj.AssemblyReference.cache
