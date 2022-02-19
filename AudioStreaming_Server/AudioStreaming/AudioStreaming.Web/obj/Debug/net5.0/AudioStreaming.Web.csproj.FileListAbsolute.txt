@@ -202,3 +202,5 @@ C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Se
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Web\obj\Debug\net5.0\AudioStreaming.Web.csprojAssemblyReference.cache
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Web\obj\Debug\net5.0\RazorDeclaration\Pages\TableRow.razor.g.cs
 C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Web\obj\Debug\net5.0\Razor\Pages\TableRow.razor.g.cs
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Web\obj\Debug\net5.0\RazorDeclaration\Pages\Player.razor.g.cs
+C:\Users\finazzi.17122\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Web\obj\Debug\net5.0\Razor\Pages\Player.razor.g.cs

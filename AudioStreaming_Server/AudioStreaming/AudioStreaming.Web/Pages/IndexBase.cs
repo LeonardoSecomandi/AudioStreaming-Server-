@@ -19,6 +19,7 @@ namespace AudioStreaming.Web.Pages
         public IEnumerable<Canzone> EleCanzoni { get; set; }
 
         public static string CurrentPlayingSong { get; set; }
+        public string a = "/";
 
         //public string Status { get; set; }
 
@@ -30,7 +31,7 @@ namespace AudioStreaming.Web.Pages
 
         public void ClickHandle(string Title)
         {
-            CurrentPlayingSong = Title;
+            CurrentPlayingSong = Title+".mp3";
         }
     }
 }
