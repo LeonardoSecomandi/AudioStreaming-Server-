@@ -115,6 +115,7 @@ namespace ClientTcpIp
                     // was doing this in a finally block, but for some reason
                     // we are hanging on response stream .Dispose so never get there
                     decompressor?.Dispose();
+                    StopPlayback();
                 }
             }
             finally

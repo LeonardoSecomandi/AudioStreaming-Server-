@@ -22,56 +22,25 @@ namespace ClientTcpIp
             nomeCanzone = nomeCanzone.Contains(".mp3") ? nomeCanzone : nomeCanzone + ".mp3";
 
             string risposta;
+            
             do
             {
-                Console.Write("Vuoi caricarla? [y/n]: ");
+                Console.Write("Vuoi riprodurla in tempo reale? [y/n]: ");
                 risposta = Console.ReadLine();
             } while (risposta != "y" && risposta != "n");
-            manda = risposta == "y" ? true : false;
-            if (manda) nomeCanzone = "%u" + nomeCanzone;
+            download = risposta == "y" ? false : true;
+            if (download) nomeCanzone = "%d" + nomeCanzone;
 
-            if (!manda)
+            new Thread(() =>
             {
-                do
-                {
-                    Console.Write("Vuoi riprodurla in tempo reale? [y/n]: ");
-                    risposta = Console.ReadLine();
-                } while (risposta != "y" && risposta != "n");
-                download = risposta == "y" ? false : true;
-                if (download) nomeCanzone = "%d" + nomeCanzone;
+                Thread.CurrentThread.IsBackground = true;
+                Connect("127.0.0.1", nomeCanzone);
+            }).Start();
 
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
-                    Connect("127.0.0.1", nomeCanzone);
-                }).Start();
-            }
-            else 
-            {
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
-                    ConnectDownload("127.0.0.1", nomeCanzone);
-                }).Start();
-            }
+            Console.WriteLine("hai finito");
             Console.ReadLine();
         }
 
-        static void ConnectDownload(String server, String message)
-        {
-            try
-            {
-                Int32 port = 13000;
-
-                TcpClient client = new TcpClient(server, port);
-
-                // mando file con davanti messaggio in byte[1024]
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-        }
 
         static void Connect(String server, String message)
         {
