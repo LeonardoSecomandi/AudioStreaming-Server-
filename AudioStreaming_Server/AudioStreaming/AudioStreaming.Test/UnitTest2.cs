@@ -1,216 +1,155 @@
-﻿//using System;
-//using Xunit;
-//using AudioStreaming.API.Models;
-//using AudioStreaming.API.Data;
-//using AudioStreaming.Models;
-//using System.Collections.Generic;
-//using Microsoft.Data.Sqlite;
-//using Microsoft.EntityFrameworkCore;
-//using System.Linq;
-
-//namespace AudioStreaming.Test
-//{
-//    public class Playlist_fixture : IDisposable
-//    {
-
-//        private bool disposedValue;
-//        private SqliteConnection _connection;
-//        public ApplicationDbContext _ContextTest;
-
-//        public Playlist_fixture()
-//        {
-//            _connection = new SqliteConnection("Filename=:memory:");
-//            _connection.Open();
-
-//            // These options will be used by the context instances in this test suite, including the connection opened above.
-//            var _contextOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
-//                .UseSqlite(_connection)
-//                .Options;
+﻿using System;
+using Xunit;
+using AudioStreaming.API.Models;
+using AudioStreaming.API.Data;
+using AudioStreaming.Models;
+using System.Collections.Generic;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+
+namespace AudioStreaming.Test
+{
+    public class Playlist_fixture : IDisposable
+    {
+
+        private bool disposedValue;
+        private SqliteConnection _connection;
+        public ApplicationDbContext _ContextTest;
+
+        public Playlist_fixture()
+        {
+            _connection = new SqliteConnection("Filename=:memory:");
+            _connection.Open();
+
+            // These options will be used by the context instances in this test suite, including the connection opened above.
+            var _contextOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(_connection)
+                .Options;
+
+            // Create the schema and seed some data
+            _ContextTest = new ApplicationDbContext(_contextOptions);
+
+            _ContextTest.Database.EnsureCreated();
+
+
+            _ContextTest.Playlist.AddRange(
+                new Playlist { PlaylistID = 1, Name = "ciao", Private = true , UserID = 1, CanzonePlaylist = new List<CanzonePlaylist>() },
+                new Playlist { PlaylistID = 2, Name = "bella", Private = false, UserID = 2, CanzonePlaylist = new List<CanzonePlaylist>() },
+                new Playlist { PlaylistID = 3, Name = "come", Private = false, UserID = 3, CanzonePlaylist = new List<CanzonePlaylist>() },
+                new Playlist { PlaylistID = 4, Name = "va", Private = true, UserID = 4, CanzonePlaylist = new List<CanzonePlaylist>() },
+                new Playlist { PlaylistID = 5, Name = "?", Private = false, UserID = 5, CanzonePlaylist = new List<CanzonePlaylist>() }
+                );
+            _ContextTest.SaveChanges();
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+
+                _connection.Close();
+
+                disposedValue = true;
+            }
+        }
+
+        public void Dispose()
+        {
+            // Non modificare questo codice. Inserire il codice di pulizia nel metodo 'Dispose(bool disposing)'
+            Dispose(disposing: true);
+            GC.SuppressFinalize(this);
+        }
+
+    }
+    public class UnitTest2 : IClassFixture<Playlist_fixture>
+    {
+        private static Playlist_fixture _fixture;
+        public UnitTest2(Playlist_fixture fixture)
+        {
+            _fixture = fixture;
+        }
+        [Fact]
+        public void CreatePlaylist()
+        {
+            var x = new PlaylistRepository(_fixture._ContextTest);
+            //Arrange
+
+            API.Models.DTOS.Requests.CreatePlaylistRequest playlist = new API.Models.DTOS.Requests.CreatePlaylistRequest();
+            playlist.PlayListTitle = "Playlist nuova";
+            playlist.UserId = 2;
+            playlist.Private = true;
+
+            //Act
+            var result = x.CreatePlaylist(playlist);
+
+            //Assert   
+            Assert.True(result.Result.Success);
+
+        }
+        [Fact]
+        public void GetPlaylist()
+        {
+            //Arrange
+
+            var x = new PlaylistRepository(_fixture._ContextTest);
+
+
+            //Act
+            var result = x.GetPlaylist();
+
+            //Assert   
+            Assert.Equal(5, result.Result.Count());
 
-//            // Create the schema and seed some data
-//            _ContextTest = new ApplicationDbContext(_contextOptions);
+        }
+        [Fact]
+        public void GetUserPlaylist()
+        {
+            //Arrange
 
-//            _ContextTest.Database.EnsureCreated();
+            var x = new PlaylistRepository(_fixture._ContextTest);
 
 
-//            _ContextTest.Canzoni.AddRange(
-//                new Playlist { SongID = 1, SongTitle = "ciao", AlbumName = "Marco", IDUserUploader = 1, DownnloadNumber = 1, Duration = 1 },
-//                new Playlist { SongID = 2, SongTitle = "bella", AlbumName = "Giorgio", IDUserUploader = 2, DownnloadNumber = 2, Duration = 2 },
-//                new Playlist { SongID = 3, SongTitle = "come", AlbumName = "Signo", IDUserUploader = 3, DownnloadNumber = 3, Duration = 3 },
-//                new Playlist { SongID = 4, SongTitle = "va", AlbumName = "Ghilo", IDUserUploader = 4, DownnloadNumber = 4, Duration = 4 },
-//                new Playlist { SongID = 5, SongTitle = "?", AlbumName = "Tudo", IDUserUploader = 5, DownnloadNumber = 5, Duration = 5 }
-//                );
-//            _ContextTest.SaveChanges();
-//        }
+            //Act
+            var result = x.GetUserPlaylist(1);
 
-//        protected virtual void Dispose(bool disposing)
-//        {
-//            if (!disposedValue)
-//            {
+            //Assert   
+            Assert.True(result.Result.Success);
 
-//                _connection.Close();
+        }
+        [Fact]
+        public void DeletePlaylist()
+        {
+            //Arrange
+            var x = new PlaylistRepository(_fixture._ContextTest);
+            
 
-//                disposedValue = true;
-//            }
-//        }
+            //Act
+            var result = x.DeletePlaylist(2);
 
-//        public void Dispose()
-//        {
-//            // Non modificare questo codice. Inserire il codice di pulizia nel metodo 'Dispose(bool disposing)'
-//            Dispose(disposing: true);
-//            GC.SuppressFinalize(this);
-//        }
+            //Assert   
+            Assert.True(result.Result.Success);
 
-//    }
-//    public class UnitTest1 : IClassFixture<Canzoni_fixture>
-//    {
-//        private static Canzoni_fixture _fixture;
-//        public UnitTest1(Canzoni_fixture fixture)
-//        {
-//            _fixture = fixture;
-//        }
-//        [Fact]
-//        public void AddCanzone()
-//        {
-//            var x = new CanzoniService(_fixture._ContextTest);
-//            //Arrange
+        }
+        //[Fact]
+        //public void AddCanzoneToPlaylist()
+        //{
+        //    //Non si può testare
+        //    var x = new PlaylistRepository(_fixture._ContextTest);
 
-//            API.Models.DTOS.Requests.CreateCanzoneRequest canzone = new API.Models.DTOS.Requests.CreateCanzoneRequest();
-//            canzone.SongTitle = "Canzone 1";
-//            canzone.AlbumName = "Album 1";
-//            canzone.IDUserUploader = 1;
-//            canzone.Duration = 30;
+        //    //Arrange
 
-//            //Act
-//            var result = x.AddCanzone(canzone);
+        //    API.Models.DTOS.Requests.AddCanzoneToPlaylistRequest playlist = new API.Models.DTOS.Requests.AddCanzoneToPlaylistRequest();
+        //    playlist.idCanzone = 2;
+        //    playlist.IdPlaylist = 3;
 
-//            //Assert   
-//            Assert.True(result.Result.Success);
+        //    //Act
+        //    var result = x.AddCanzoneToPlaylist(playlist);
 
-//        }
-//        [Fact]
-//        public void GetCanzoni()
-//        {
-//            //Arrange
+        //    //Assert   
+        //    Assert.True(result.Result.Success);
 
-//            CanzoniService canzoniService = new CanzoniService(_fixture._ContextTest);
+        //}
 
-
-
-//            //Act
-
-//            var result = canzoniService.GetCanzoni();
-
-
-
-//            //Assert
-//            Assert.Equal(5, result.Result.Count());
-//        }
-
-//        [Fact]
-//        public void Search()
-//        {
-//            //Arrange
-
-//            CanzoniService canzoniService = new CanzoniService(_fixture._ContextTest);
-//            AudioStreaming.API.Models.DTOS.Requests.SearchSongRequest search = new AudioStreaming.API.Models.DTOS.Requests.SearchSongRequest();
-//            search.Title = "ciao";
-//            search.Album = "Marco";
-
-
-//            //Act
-
-//            var result = canzoniService.Search(search);
-
-
-
-//            //Assert
-//            Assert.True(result.Result.Success);
-//        }
-
-//        [Fact]
-//        public void GetCanzone()
-//        {
-//            //Arrange
-
-//            CanzoniService canzoniService = new CanzoniService(_fixture._ContextTest);
-
-
-
-//            //Act
-
-//            var result = canzoniService.GetCanzone(2);
-
-
-
-//            //Assert
-//            Assert.True(result.Result.SongTitle == "bella" &&
-//                result.Result.AlbumName == "Giorgio" &&
-//                result.Result.IDUserUploader == 2 &&
-//                result.Result.Duration == 2 &&
-//                result.Result.DownnloadNumber == 2);
-//        }
-
-//        [Fact]
-//        public void DeleteCanzone()
-//        {
-//            //Arrange
-
-//            CanzoniService canzoniService = new CanzoniService(_fixture._ContextTest);
-
-
-
-//            //Act
-
-//            var result = canzoniService.DeleteCanzone(3);
-
-
-
-//            //Assert
-//            Assert.True(result.Result.Success);
-//        }
-
-//        [Fact]
-//        public void UpdateCanzone()
-//        {
-//            //Arrange
-
-//            CanzoniService canzoniService = new CanzoniService(_fixture._ContextTest);
-//            AudioStreaming.API.Models.DTOS.Requests.UpdateSongRequest update = new AudioStreaming.API.Models.DTOS.Requests.UpdateSongRequest();
-//            update.id = 4;
-//            update.SongTitle = "Caro amico";
-//            update.AlbumName = "Ti scrivo";
-//            update.Duration = 40;
-
-
-//            //Act
-
-//            var result = canzoniService.UpdateCanzone(update);
-
-
-
-//            //Assert
-//            Assert.True(result.Result.Success);
-//        }
-//        [Fact]
-//        public void ChangeDownloadNumber()
-//        {
-//            //Arrange
-
-//            CanzoniService canzoniService = new CanzoniService(_fixture._ContextTest);
-//            AudioStreaming.API.Models.DTOS.Requests.ChangeDownloadNumberReq changeDownload = new AudioStreaming.API.Models.DTOS.Requests.ChangeDownloadNumberReq();
-//            changeDownload.id = 5;
-//            changeDownload.Value = 13513;
-
-
-//            //Act
-
-//            var result = canzoniService.ChangeDownloadNumber(changeDownload);
-
-
-
-//            //Assert
-//            Assert.True(result.Result.Success);
-//        }
-//    }
-//}
+    }
+}
