@@ -1944,23 +1944,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\secomandi.17131\\.nuget\\packages\\": {},
+    "C:\\Users\\rota.18353\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
+      "projectUniqueName": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
       "projectName": "AudioStreaming.API",
-      "projectPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
-      "packagesPath": "C:\\Users\\secomandi.17131\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\obj\\",
+      "projectPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
+      "packagesPath": "C:\\Users\\rota.18353\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\secomandi.17131\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rota.18353\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1974,8 +1974,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
-              "projectPath": "C:\\Users\\secomandi.17131\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
+            "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
+              "projectPath": "C:\\Users\\rota.18353\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
             }
           }
         }
