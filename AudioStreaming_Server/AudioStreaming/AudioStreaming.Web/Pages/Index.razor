@@ -22,22 +22,51 @@
 
                     @foreach (var c in EleCanzoni)
                     {
-                        <tr>
-                            <th scope="row">@c.SongID</th>
-                            <td @onclick="()=> { ClickHandle(c.SongTitle);nv.NavigateTo(a,true); }">@c.SongTitle</td>
-                            <td>@c.AlbumName</td>
-                            <td>@c.Duration</td>
-                        </tr>                    
+                        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                            <table class="table table-bordered table-striped mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="row">@c.SongID</th>
+                                        <td @onclick="() => { ClickHandle(c.SongTitle); nv.NavigateTo(a, true); }">@c.SongTitle</td>
+                                        <td>@c.AlbumName</td>
+                                        <td>@c.Duration</td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
                     }
                 }
 
+
             </tbody>
         </table>
-        <Player CurrentPlayingSong="@CurrentPlayingSong"></Player> 
+
+        <Player CurrentPlayingSong="@CurrentPlayingSong"></Player>
         <br />
         <h2 class="TitleLable">Current: @CurrentPlayingSong</h2>
         <br />
         <h2>Playlist</h2>
+           <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">nome</th>
+                    <th scope="col">numero1</th>
+                    <th scope="col">numero2</th>
+                </tr>
+            </thead>
+            <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                <table class="table table-bordered table-striped mb-0">
+                    <thead>
+                        <tr>
+                            <th scope="row">nome playlist</th>
+                            <td>numero album</td>
+                            <td>numero canzoni</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+           </table>
+
     </Authorized>
     <NotAuthorized>
         <h2>Loggati</h2>
