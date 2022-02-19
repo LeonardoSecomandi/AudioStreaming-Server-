@@ -1,0 +1,47 @@
+﻿@page "/"
+@inherits IndexBase
+@inject NavigationManager nv
+
+
+<AuthorizeView>
+    <Authorized>
+        <h2>Home</h2>
+        <hr />
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Album</th>
+                    <th scope="col">Durata</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (EleCanzoni != null)
+                {
+
+                    @foreach (var c in EleCanzoni)
+                    {
+                        <tr>
+                            <th scope="row">@c.SongID</th>
+                            <td @onclick="()=> { ClickHandle(c.SongTitle);nv.NavigateTo(a,true); }">@c.SongTitle</td>
+                            <td>@c.AlbumName</td>
+                            <td>@c.Duration</td>
+                        </tr>                    
+                    }
+                }
+
+            </tbody>
+        </table>
+        <Player CurrentPlayingSong="@CurrentPlayingSong"></Player> 
+        <br />
+        <h2 class="TitleLable">Current: @CurrentPlayingSong</h2>
+        <br />
+        <h2>Playlist</h2>
+    </Authorized>
+    <NotAuthorized>
+        <h2>Loggati</h2>
+    </NotAuthorized>
+</AuthorizeView>
+
+

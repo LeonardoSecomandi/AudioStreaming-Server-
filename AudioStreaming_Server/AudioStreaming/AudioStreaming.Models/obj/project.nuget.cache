@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jrjePtA3r8IZv2ewpVd8eYWseuqtp4EnfhWo/W8ZVU9koOm5okkJBcxBHVF1TzOHibk/wo8BU8+nl9z8BfIFfQ==",
+  "dgSpecHash": "n/JWWzskBROKmhgp3aUxUbKOl1HPis8ynP6pvv6+elN421vIFHt2bVz1WZ31Ix8ehGUiEAg0a7pklG2WEomRlQ==",
   "success": true,
-  "projectFilePath": "D:\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
+  "projectFilePath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
