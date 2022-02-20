@@ -1,0 +1,48 @@
+body {
+    background: #ffff;
+}
+
+.table-fixed {
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+    .table-fixed thead,
+    .table-fixed thead > th {
+        background: #400b2a;
+        color: #fff;
+    }
+
+    .table-fixed tbody tr td {
+        background: linear-gradient(180deg, #240d42 0%, #400b2a 70%);
+    }
+
+    .table-fixed > thead > tr > th {
+        border: 0 !important;
+    }
+
+    .table-fixed > tbody > tr > td:last-child {
+        border-right: 0;
+    }
+
+    .table-fixed tbody td,
+    .table-fixed thead > tr > th {
+        float: left;
+        font-size: 18px;
+        color: #888c94;
+        padding-left: 16px !important;
+    }
+
+    .table-fixed .col {
+        width: 25%;
+    }
+
+    .table-fixed tbody {
+        display: block;
+        height: 170px;
+        overflow-y: auto;
+    }
+
+    .table-fixed tr {
+        display: block;
+    }
