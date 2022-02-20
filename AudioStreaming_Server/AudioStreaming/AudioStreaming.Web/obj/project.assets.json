@@ -6179,23 +6179,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\finazzi.17122\\.nuget\\packages\\": {},
+    "C:\\Users\\leose\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Web\\AudioStreaming.Web.csproj",
+      "projectUniqueName": "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Web\\AudioStreaming.Web.csproj",
       "projectName": "AudioStreaming.Web",
-      "projectPath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Web\\AudioStreaming.Web.csproj",
-      "packagesPath": "C:\\Users\\finazzi.17122\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Web\\obj\\",
+      "projectPath": "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Web\\AudioStreaming.Web.csproj",
+      "packagesPath": "C:\\Users\\leose\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\finazzi.17122\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leose\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6209,8 +6209,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
-              "projectPath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
+            "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
+              "projectPath": "D:\\GitHub\\repository1\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
             }
           }
         }
@@ -6268,7 +6268,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }
