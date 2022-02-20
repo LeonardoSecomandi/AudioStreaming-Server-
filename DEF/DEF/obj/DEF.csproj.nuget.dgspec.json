@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\DEF\\DEF\\DEF.csproj": {}
+    "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\DEF\\DEF\\DEF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\DEF\\DEF\\DEF.csproj": {
+    "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\DEF\\DEF\\DEF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\DEF\\DEF\\DEF.csproj",
+        "projectUniqueName": "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\DEF\\DEF\\DEF.csproj",
         "projectName": "DEF",
-        "projectPath": "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\DEF\\DEF\\DEF.csproj",
-        "packagesPath": "C:\\Users\\Zaroual.17224\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zaroual.17224\\Documents\\GitHub\\DEF\\DEF\\obj\\",
+        "projectPath": "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\DEF\\DEF\\DEF.csproj",
+        "packagesPath": "C:\\Users\\wallo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\DEF\\DEF\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Zaroual.17224\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wallo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,6 +69,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.21, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [
@@ -84,12 +85,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.13, 3.1.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -98,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

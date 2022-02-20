@@ -115,15 +115,15 @@
         line-height: 3rem;
     }
 
-.nav-item[b-lkrt48phgx]  a.active {
-    background-color: rgba(3,255,255,0.25);
-    color: white;
-}
+        .nav-item[b-lkrt48phgx]  a.active {
+            background-color: #360d17;
+            color: white;
+        }
 
-.nav-item[b-lkrt48phgx]  a:hover {
-    background-color: rgba(3,255,255,0.25);
-    color: white;
-}
+        .nav-item[b-lkrt48phgx]  a:hover {
+            background-color: #360d17;
+            color: white;
+        }
 
 @media (min-width: 641px) {
     .navbar-toggler[b-lkrt48phgx] {

@@ -3,8 +3,7 @@ body {
 }
 
 .table-fixed {
-    margin-left: 0px;
-    margin-top: 0px;
+    margin: 0px;
 }
 
     .table-fixed thead,

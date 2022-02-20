@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vJpjwIAGGurgGdKcJ4qexibRbVJsln7ukSxGAS7r8yaP94d6KuArsdervulxHl83sa1VmO8EIW0jJoYa4NKg8Q==",
+  "dgSpecHash": "ptTVU1yzDnNbYWVyi/ecgXsN57UAZS9/8j6+ivYopRc2l0lmOdeuWV+JCUFx7zXf2NKxKqEoaaT/CN+1Qnr7Sw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wallo\\Desktop\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
+  "projectFilePath": "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wallo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\wallo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",

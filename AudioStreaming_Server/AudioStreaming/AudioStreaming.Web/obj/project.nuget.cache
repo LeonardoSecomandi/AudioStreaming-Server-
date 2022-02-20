@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4LpGKM67d16EtKLB3U1oQMo357V88Lg/0MfMEhsGJ6Ea6E/wSMNBm4YaDxju+Fqq+aJ/foHbCLCltBt/VX9hXQ==",
+  "dgSpecHash": "k6ZYwVy3gGFy/fa7CpqV7Ysm6PPzsAdTqJhRbgescxqBCDZdc6Uv/oXZPYYZEYo/r3vOMThYqL91v0J4kuDH1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\wallo\\Desktop\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Web\\AudioStreaming.Web.csproj",
+  "projectFilePath": "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Web\\AudioStreaming.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wallo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\wallo\\.nuget\\packages\\microsoft.aspnetcore.blazor.httpclient\\3.2.0-preview3.20168.3\\microsoft.aspnetcore.blazor.httpclient.3.2.0-preview3.20168.3.nupkg.sha512",

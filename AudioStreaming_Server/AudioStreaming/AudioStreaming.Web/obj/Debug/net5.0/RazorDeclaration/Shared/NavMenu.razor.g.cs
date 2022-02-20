@@ -90,7 +90,7 @@ using AudioStreaming.Web.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\wallo\OneDrive\Documenti\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Web\Shared\NavMenu.razor"
+#line 29 "C:\Users\wallo\OneDrive\Documenti\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Web\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

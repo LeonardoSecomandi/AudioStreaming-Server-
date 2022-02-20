@@ -1949,11 +1949,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wallo\\Desktop\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
+      "projectUniqueName": "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
       "projectName": "AudioStreaming.API",
-      "projectPath": "C:\\Users\\wallo\\Desktop\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
+      "projectPath": "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\AudioStreaming.API.csproj",
       "packagesPath": "C:\\Users\\wallo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wallo\\Desktop\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\obj\\",
+      "outputPath": "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wallo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1970,8 +1970,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\wallo\\Desktop\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
-              "projectPath": "C:\\Users\\wallo\\Desktop\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
+            "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj": {
+              "projectPath": "C:\\Users\\wallo\\OneDrive\\Documenti\\GitHub\\AudioStreaming-Server-\\AudioStreaming_Server\\AudioStreaming\\AudioStreaming.Models\\AudioStreaming.Models.csproj"
             }
           }
         }
