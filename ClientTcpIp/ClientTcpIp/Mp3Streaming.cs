@@ -228,11 +228,16 @@ namespace ClientTcpIp
                 
             }
         }
+
         private void Play()
-        {            
-            waveOut.Play();
-            Console.WriteLine(String.Format("Started playing, waveOut.PlaybackState={0}", waveOut.PlaybackState));
-            playbackState = StreamingPlaybackState.Playing;            
+        {
+            try
+            {
+                waveOut.Play();
+                Console.WriteLine(String.Format("Started playing, waveOut.PlaybackState={0}", waveOut.PlaybackState));
+                playbackState = StreamingPlaybackState.Playing;
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
         }
 
         private void Pause()

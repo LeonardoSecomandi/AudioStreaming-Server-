@@ -433,23 +433,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\finazzi.17122\\.nuget\\packages\\": {},
+    "C:\\Users\\Francesco\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj",
+      "projectUniqueName": "F:\\GithunRep\\ProgettiMiei\\AudioStreaming-Server-\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj",
       "projectName": "ClientTcpIp",
-      "projectPath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj",
-      "packagesPath": "C:\\Users\\finazzi.17122\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\finazzi.17122\\Documents\\GitHub\\AudioStreaming-Server-\\ClientTcpIp\\ClientTcpIp\\obj\\",
+      "projectPath": "F:\\GithunRep\\ProgettiMiei\\AudioStreaming-Server-\\ClientTcpIp\\ClientTcpIp\\ClientTcpIp.csproj",
+      "packagesPath": "C:\\Users\\Francesco\\.nuget\\packages\\",
+      "outputPath": "F:\\GithunRep\\ProgettiMiei\\AudioStreaming-Server-\\ClientTcpIp\\ClientTcpIp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\finazzi.17122\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Francesco\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -490,21 +490,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.12, 3.1.12]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }

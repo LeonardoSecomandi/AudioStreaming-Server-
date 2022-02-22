@@ -72,27 +72,46 @@ class Server
         TcpClient client = (TcpClient)obj;
         var stream = client.GetStream();
         
-        string data = null;
+        string data;
         Byte[] bytes = new Byte[1028];
         try
         {
             stream.Flush();
             
-            stream.Read(bytes);
-            string hex = BitConverter.ToString(bytes);
+            stream.Read(bytes);            
             data = Encoding.ASCII.GetString(bytes, 0, bytes.Length);
             Console.WriteLine("{1}: Received: {0}", data, Thread.CurrentThread.ManagedThreadId);
             bool manda = data.StartsWith("%d");
             bool carica = data.StartsWith("%u");
-            if (!carica) { 
+            if (!carica)
+            {
                 data = manda ? data.Split(".mp3")[0].Replace("%d", " ") + ".mp3" : data.Split(".mp3")[0] + ".mp3";
                 Console.WriteLine("Mandando file");
                 SendFile(client, data.Trim(), manda);
                 Console.WriteLine("Finito di mandare file");
-                if (manda) {
+                if (manda)
+                {
                     stream.Close();
                     client.Close();
                 }
+            }
+            else 
+            {
+                data = data.Replace("%u", "");
+                string nomeCanzone = data.Split("%")[1].Replace("\0","");
+                data= data.Split("%")[0];
+                byte[] array = new byte[1024];
+                array = Encoding.ASCII.GetBytes("Ricevuto file");
+                
+                stream.Write(array,0,array.Length);
+                array = new byte[1024];
+                int i = 0;
+                foreach (var a in data.Split(",")) 
+                {
+                    array[i] = Convert.ToByte(a);                    
+                    i++;
+                }
+                File.WriteAllBytes(nomeCanzone, array);
             }
         }
         catch (Exception e)
