@@ -5,14 +5,20 @@ using System.Threading;
 using ClientTcpIp;
 using System.Text;
 using System.IO;
+using ClientTcpIp.Models;
 
 namespace ClientTcpIp
 {
     class Program
     {        
         
+
         static void Main(string[] args)
         {
+
+            CanzoniService service = new CanzoniService();
+            var eleCanzoni = service.GetCanzoni().Result;
+
             bool manda;
             bool download;
             string nomeCanzone;
