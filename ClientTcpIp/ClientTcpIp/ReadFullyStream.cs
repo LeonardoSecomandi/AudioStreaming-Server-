@@ -74,7 +74,7 @@ namespace ClientTcpIp
                     {
                         readAheadOffset = 0;
                         readAheadLength = sourceStream.Read(readAheadBuffer, 0, readAheadBuffer.Length);
-                        Console.WriteLine(String.Format("Read {0} bytes (requested {1})", readAheadLength, readAheadBuffer.Length));
+                        //Console.WriteLine(String.Format("Read {0} bytes (requested {1})", readAheadLength, readAheadBuffer.Length));
                         if (readAheadLength == 0)
                         {
                             break;
@@ -83,7 +83,7 @@ namespace ClientTcpIp
                     catch (ObjectDisposedException) 
                     {
                         this.Dispose();
-                        Console.WriteLine("Oggetto disposed");                        
+                        //Console.WriteLine("Oggetto disposed");                        
                     }
                 }
             }

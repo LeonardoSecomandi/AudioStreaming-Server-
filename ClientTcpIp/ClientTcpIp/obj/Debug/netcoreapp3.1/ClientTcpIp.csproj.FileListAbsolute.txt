@@ -84,3 +84,4 @@ D:\GitHub\repository1\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\bin\Debug\n
 D:\GitHub\repository1\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\GitHub\repository1\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\obj\Debug\netcoreapp3.1\ClientTcpIp.csproj.CopyComplete
 D:\GitHub\repository1\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\obj\Debug\netcoreapp3.1\ClientTcpIp.genruntimeconfig.cache
+F:\GithunRep\ProgettiMiei\AudioStreaming-Server-\ClientTcpIp\ClientTcpIp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

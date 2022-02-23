@@ -69,7 +69,7 @@ namespace ClientTcpIp
                     {
                         if (IsBufferNearlyFull)
                         {
-                            Console.WriteLine("Buffer getting full, taking a break");
+                            //Console.WriteLine("Buffer getting full, taking a break");
                             Thread.Sleep(500);
                         }
                         else
@@ -111,7 +111,7 @@ namespace ClientTcpIp
                         }
 
                     } while (playbackState != StreamingPlaybackState.Stopped);
-                    Console.WriteLine("Exiting");
+                    //Console.WriteLine("Exiting");
                     // was doing this in a finally block, but for some reason
                     // we are hanging on response stream .Dispose so never get there
                     decompressor?.Dispose();
@@ -188,8 +188,8 @@ namespace ClientTcpIp
 
         private void ShowBufferState(double totalSeconds)
         {
-            Console.WriteLine(String.Format("{0:0.0}s", totalSeconds));
-            Console.WriteLine((int)(totalSeconds * 1000));
+            //Console.WriteLine(String.Format("{0:0.0}s", totalSeconds));
+            //Console.WriteLine((int)(totalSeconds * 1000));
         }
 
         private void timer1_Tick(object sender, ElapsedEventArgs e)
@@ -198,7 +198,7 @@ namespace ClientTcpIp
             {
                 if (waveOut == null && bufferedWaveProvider != null)
                 {
-                    Console.WriteLine("Creating WaveOut Device");
+                    //Console.WriteLine("Creating WaveOut Device");
                     waveOut = CreateWaveOut();
                     waveOut.PlaybackStopped += OnPlaybackStopped;
                     volumeProvider = new VolumeWaveProvider16(bufferedWaveProvider);
@@ -221,7 +221,7 @@ namespace ClientTcpIp
                     }
                     else if (fullyDownloaded && bufferedSeconds < 1)
                     {
-                        Console.WriteLine("Reached end of stream");
+                        //Console.WriteLine("Reached end of stream");
                         StopPlayback();
                     }
                 }
@@ -234,10 +234,13 @@ namespace ClientTcpIp
             try
             {
                 waveOut.Play();
-                Console.WriteLine(String.Format("Started playing, waveOut.PlaybackState={0}", waveOut.PlaybackState));
+                //Console.WriteLine(String.Format("Started playing, waveOut.PlaybackState={0}", waveOut.PlaybackState));
                 playbackState = StreamingPlaybackState.Playing;
             }
-            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            catch (Exception ex) 
+            { 
+                //Console.WriteLine(ex.Message); 
+            }
         }
 
         private void Pause()
@@ -249,8 +252,8 @@ namespace ClientTcpIp
 
             if(fullyDownloaded)
                 this.MP3StreamingPanel_Disposing(this,new StoppedEventArgs());
-            else
-                Console.WriteLine(String.Format("Paused to buffer, waveOut.PlaybackState={0}", waveOut.PlaybackState));
+            //else
+            //    Console.WriteLine(String.Format("Paused to buffer, waveOut.PlaybackState={0}", waveOut.PlaybackState));
         }
 
         private IWavePlayer CreateWaveOut()
@@ -273,7 +276,7 @@ namespace ClientTcpIp
             if (playbackState == StreamingPlaybackState.Playing || playbackState == StreamingPlaybackState.Buffering)
             {
                 waveOut.Pause();
-                Console.WriteLine(String.Format("User requested Pause, waveOut.PlaybackState={0}", waveOut.PlaybackState));
+                //Console.WriteLine(String.Format("User requested Pause, waveOut.PlaybackState={0}", waveOut.PlaybackState));
                 playbackState = StreamingPlaybackState.Paused;
             }
         }
@@ -290,11 +293,11 @@ namespace ClientTcpIp
 
         private void OnPlaybackStopped(object sender, StoppedEventArgs e)
         {
-            Console.WriteLine("Playback Stopped");
-            if (e.Exception != null)
-            {
-                Console.WriteLine(String.Format("Playback Error {0}", e.Exception.Message));
-            }
+            //Console.WriteLine("Playback Stopped");
+            //if (e.Exception != null)
+            //{
+            //    Console.WriteLine(String.Format("Playback Error {0}", e.Exception.Message));
+            //}
         }
     }    
 }
