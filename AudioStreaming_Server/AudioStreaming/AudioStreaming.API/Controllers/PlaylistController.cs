@@ -89,6 +89,7 @@ namespace AudioStreaming.API.Controllers
             }
         }
 
+        [HttpDelete("removecanzone")]
         public async Task<RemoveCanzoneFromPlaylistResponse> RemoveCanzoneFromPlaylist(AddCanzoneToPlaylistRequest req)
         {
             var result = await _playlistRepository.RemoveCanzoneFromPlaylist(req);
