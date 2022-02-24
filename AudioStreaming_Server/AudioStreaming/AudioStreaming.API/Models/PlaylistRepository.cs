@@ -178,5 +178,59 @@ namespace AudioStreaming.API.Models
             };
 
         }
+
+        public async Task<RemoveCanzoneFromPlaylistResponse> RemoveCanzoneFromPlaylist(AddCanzoneToPlaylistRequest req) 
+        {
+            var isPlaylist = await _context.Playlist.FirstOrDefaultAsync(x => x.PlaylistID == req.IdPlaylist);
+            if (isPlaylist is null)
+                return new RemoveCanzoneFromPlaylistResponse()
+                {
+                    Success = false,
+                    Errors = null,
+                    Message = "errore nel recupero della playlist",
+                    Playlist=null
+                };
+
+            var isCanzone = await _context.Canzoni.FirstOrDefaultAsync(X => X.SongID == req.idCanzone);
+
+            var ispresent = await _context.CanzonePlaylists.FirstOrDefaultAsync(x => x.PlaylistID == isPlaylist.PlaylistID && x.Canzone.SongID == isCanzone.SongID);
+            if (ispresent == null)
+                return new RemoveCanzoneFromPlaylistResponse()
+                {
+                    Success = false,
+                    Errors = null,
+                    Message = "canzone non presente nella playlist"
+                };
+
+            if (isCanzone is null)
+                return new RemoveCanzoneFromPlaylistResponse()
+                {
+                    Success = false,
+                    Errors = null,
+                    Message = "errore nel recupero della canzone",
+                    Playlist=null
+                };
+            var Relation = await _context.CanzonePlaylists.FirstOrDefaultAsync(x => x.PlaylistID == req.IdPlaylist && x.SongID==req.idCanzone);
+            if (Relation is null)
+                return new RemoveCanzoneFromPlaylistResponse()
+                {
+                    Success = false,
+                    Message = "Errore nella rimozione della canzone",
+                    Errors = null,
+                    Playlist = null
+                };
+
+            _context.Remove(Relation);
+            await _context.SaveChangesAsync();
+            return new RemoveCanzoneFromPlaylistResponse()
+            {
+                Success = true,
+                Message = "Canzone Rimossa dalla playlist",
+                Playlist = isPlaylist,
+                Errors = null
+            };
+
+            
+        }
     }
 }

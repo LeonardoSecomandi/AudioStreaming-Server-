@@ -88,5 +88,12 @@ namespace AudioStreaming.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Errore nel recupero dati dal database");
             }
         }
+
+        [HttpDelete("removecanzone")]
+        public async Task<RemoveCanzoneFromPlaylistResponse> RemoveCanzoneFromPlaylist(AddCanzoneToPlaylistRequest req)
+        {
+            var result = await _playlistRepository.RemoveCanzoneFromPlaylist(req);
+            return result;
+        }
     }
 }

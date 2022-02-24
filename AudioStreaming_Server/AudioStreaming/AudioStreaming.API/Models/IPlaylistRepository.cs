@@ -17,6 +17,7 @@ namespace AudioStreaming.API.Models
         public Task<DeletePlaylistResponse> DeletePlaylist(int idPlaylist);
 
         public Task<AddCanzoneToPlaylistResponse> AddCanzoneToPlaylist(AddCanzoneToPlaylistRequest req);
+        public Task<RemoveCanzoneFromPlaylistResponse> RemoveCanzoneFromPlaylist(AddCanzoneToPlaylistRequest req);
 
 
     }

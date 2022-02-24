@@ -1,4 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="D:\GitHub\repository1\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Web\obj\Debug\net5.0\scopedcss\bundle\" />
-  <ContentRoot BasePath="/Identity" Path="C:\Users\leose\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.4\staticwebassets\V4\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Fra\Documents\GitHub\AudioStreaming-Server-\AudioStreaming_Server\AudioStreaming\AudioStreaming.Web\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/Identity" Path="C:\Users\Fra\.nuget\packages\microsoft.aspnetcore.identity.ui\5.0.4\staticwebassets\V4\" />
 </StaticWebAssets>
