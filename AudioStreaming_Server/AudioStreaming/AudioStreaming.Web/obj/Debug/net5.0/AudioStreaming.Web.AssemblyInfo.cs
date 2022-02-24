@@ -11,7 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-AudioStreaming.Web-B49E0381-1341-4CC8-B2C2-B2F18728662F")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("AudioStreaming.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
